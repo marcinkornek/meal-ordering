@@ -1,2 +1,3 @@
 en:
-  hello: "Hello world"
+  'SESSION_NEW_SIGN_IN_TITLE': 'Login'
+  'SESSION_NEW_SIGN_IN_WITH_FACEBOOK': 'Login with facebook'

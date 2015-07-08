@@ -29,6 +29,10 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-angular-ui-router'
   gem 'rails-assets-angular-resource'
   gem 'rails-assets-angular-translate'
+  gem 'rails-assets-angular-bootstrap'
+  gem 'rails-assets-bootstrap'
+  gem 'rails-assets-Font-Awesome'
+  gem 'rails-assets-angular-cookies'
 end
 
 group :development, :test do

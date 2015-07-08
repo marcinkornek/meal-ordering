@@ -5,6 +5,8 @@
 //= require angular-ui-router
 //= require angular-translate
 //= require angular-resource
+//= require angular-bootstrap
+//= require angular-cookies
 //
 //= require ./angular/init
 //= require ./angular/routes

@@ -3,6 +3,8 @@ angular.module('MealOrdering', [
   'jmdobry.angular-cache',
   'pascalprecht.translate',
   'ngResource',
+  'ui.bootstrap',
+  'ngCookies',
 ])
   .factory 'railsLocalesLoader', ($http) ->
     (options) ->
@@ -43,3 +45,22 @@ angular.module('MealOrdering', [
   .config ["$httpProvider", (provider) ->
     provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
   ]
+
+
+# ###
+# http://stackoverflow.com/a/22540482/3922041
+# ###
+
+angular.module('MealOrdering').run([ "$rootScope", "$state", "$stateParams", "authorization", "principal", ($rootScope, $state, $stateParams, authorization, principal) ->
+  $rootScope.$on "$stateChangeStart", (event, toState, toParams, fromState, fromParams) ->
+    $rootScope.toState = toState
+    $rootScope.toStateParams = toParams
+    if window.currentUser.id
+      principal.authenticate
+        username: window.currentUser.username
+        roles: [ window.currentUser.role ]
+    else
+      principal.authenticate(null)
+    authorization.authorize()
+  $rootScope.$on "$stateChangeSuccess", (event, toState, toParams, fromState, fromParams) ->
+])
