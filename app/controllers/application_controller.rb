@@ -3,8 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   include JsEnv
-
   before_action :set_locale
+  helper_method :logged_in?, :current_user
 
   def set_locale
     logger.debug "* Accept-Language: #{request.env['HTTP_ACCEPT_LANGUAGE']}"
@@ -14,6 +14,14 @@ class ApplicationController < ActionController::Base
   end
 
   private
+
+  def current_user
+    @current_user ||= User.find_by(id: session[:user_id])
+  end
+
+  def logged_in?
+    current_user
+  end
 
   def extract_locale_from_accept_language_header
     if request.env['HTTP_ACCEPT_LANGUAGE']

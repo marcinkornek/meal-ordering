@@ -6,7 +6,9 @@ class Translations
   end
 
   def for(lang)
-    raise InvalidLocale, "#{lang} is not supported" unless valid_locale?(lang.to_s)
+    unless valid_locale?(lang.to_s)
+      fail InvalidLocale.new("#{lang} is not supported")
+    end
 
     I18n.backend.send(:init_translations)
     hash = I18n.backend.send(:translations)[lang.to_sym]
