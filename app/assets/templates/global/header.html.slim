@@ -1,27 +1,19 @@
 nav.navbar.navbar-default
-  .container-fluid
+  .container
     .navbar-header
       button.navbar-toggle.collapsed aria-expanded="false" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"
         span.sr-only Toggle navigation
-      a.navbar-brand href="#"  Meal Order
+      a.navbar-brand href="#" Meal Order
 
-    nav.right-nav
-      ul.menu
-        li.language
-          a.title ng-show="data.locale=='pl'"
-            ' PL
-          a.title ng-show="data.locale=='en'"
-            ' EN
-
-          .submenu-small
-            ul.links-small
-              li
-                a ng-click="changeLanguage('pl')" PL
-                i.fa.fa-check ng-show="data.locale=='pl'"
-              li
-                a ng-click="changeLanguage('en')" EN
-                i.fa.fa-check ng-show="data.locale=='en'"
-
-      li.logout ng-show="data.user.id"
-        a ng-click="destroySession()"
-          i.fa.fa-power-off
+    ul.nav.navbar-nav.navbar-right
+      li dropdown="" is-open="status.isopen"
+        a.dropdown-toggle dropdown-toggle="" ng-disabled="disabled" type="button"
+          ' {{ data.user.email }}
+          span.caret
+        ul.dropdown-menu role="menu"
+          li
+            a href="#"  Account
+          li.divider
+          li
+            a ng-click="destroySession()"
+              | Logout
