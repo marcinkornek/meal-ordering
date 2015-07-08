@@ -6,13 +6,29 @@ nav.navbar.navbar-default
       a.navbar-brand href="#" Meal Order
 
     ul.nav.navbar-nav.navbar-right
+      li dropdown="" is-open="status.isopen1"
+        a.dropdown-toggle dropdown-toggle="" ng-disabled="disabled" type="button"
+          .header__language
+            ' {{ data.locale }}
+          span.caret
+        ul.dropdown-menu role="menu"
+          li
+            a ng-click="changeLanguage('pl')"
+              span PL
+              i.fa.fa-check ng-show="data.locale=='pl'"
+          li
+            a ng-click="changeLanguage('en')"
+              span EN
+              i.fa.fa-check ng-show="data.locale=='en'"
+
       li dropdown="" is-open="status.isopen"
         a.dropdown-toggle dropdown-toggle="" ng-disabled="disabled" type="button"
           ' {{ data.user.email }}
           span.caret
         ul.dropdown-menu role="menu"
           li
-            a href="#"  Account
+            a ui-sref="users_show({user_id: data.user.id})"
+              | Account
           li.divider
           li
             a ng-click="destroySession()"

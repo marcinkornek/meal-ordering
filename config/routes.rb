@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: {format: :json} do
     resource :session, only: [:destroy]
+    resource :users,   only: [:show]
   end
 
   get '/auth/:provider/callback' => 'api/sessions#oauth', as: :oauth

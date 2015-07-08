@@ -1,3 +1,10 @@
 en:
+
+  # SESSION
   'SESSION_NEW_SIGN_IN_TITLE': 'Login'
   'SESSION_NEW_SIGN_IN_WITH_FACEBOOK': 'Login with facebook'
+
+  # USERS
+  'USER_SHOW_EMAIL': 'email'
+  'USER_SHOW_NAME': 'name'
+  'USER_SHOW_ROLE': 'role'
