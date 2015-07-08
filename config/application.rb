@@ -29,6 +29,7 @@ module MealOrdering
     config.i18n.available_locales = [:en, :pl]
     config.i18n.default_locale = :pl
     config.assets.precompile += %w{locales/*.json}
+    config.autoload_paths << Rails.root.join('app/representers')
 
     config.active_record.raise_in_transactional_callbacks = true
   end

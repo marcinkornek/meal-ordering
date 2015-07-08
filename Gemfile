@@ -17,6 +17,9 @@ gem 'coffee-rails'
 gem 'execjs'
 gem 'ngannotate-rails'
 gem 'autoprefixer-rails'
+gem 'figaro'
+gem 'omniauth-facebook'
+gem 'roar-rails'
 
 # assets
 source 'https://rails-assets.org' do
