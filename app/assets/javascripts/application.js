@@ -7,6 +7,7 @@
 //= require angular-resource
 //= require angular-bootstrap
 //= require angular-cookies
+//= require underscore
 //
 //= require ./angular/init
 //= require ./angular/routes

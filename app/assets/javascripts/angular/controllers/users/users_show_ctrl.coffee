@@ -1,4 +1,4 @@
-UserShowCtrl = ($scope, $state, $stateParams, usersData) ->
+UserShowCtrl = ($scope, $state, usersData) ->
 
   # loading data
 
@@ -17,4 +17,4 @@ UserShowCtrl = ($scope, $state, $stateParams, usersData) ->
   $scope.loadUser()
 
 angular.module('MealOrdering').controller 'UserShowCtrl', UserShowCtrl
-UserShowCtrl.$inject = ['$scope', '$state', '$stateParams', 'usersData']
+UserShowCtrl.$inject = ['$scope', '$state', 'usersData']

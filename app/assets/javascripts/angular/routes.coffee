@@ -21,7 +21,7 @@ angular.module('MealOrdering').config ($stateProvider, $urlRouterProvider) ->
       }
     })
     .state('users_show', {
-      url: '/users/:user_id',
+      url: '/account',
       data: {
         roles: ['user']
       },

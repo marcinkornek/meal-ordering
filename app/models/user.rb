@@ -6,26 +6,26 @@ class User < ActiveRecord::Base
   validates :uid,        presence: true
   validates :provider,   presence: true
 
-  def self.find_for_oauth(auth)
-    user = User.where(provider: auth.provider, uid: auth.uid).first
+  def self.find_for_oauth(params)
+    user = User.where(provider: params[:provider], uid: params[:id]).first
     if user
       p '--------- already registered with oauth -----------'
       user
     else
       p '--------- creating user with oauth -----------'
-      create_user_with_aouth(auth)
+      create_user_with_aouth(params)
     end
   end
 
   private
 
-  def self.create_user_with_aouth(auth)
+  def self.create_user_with_aouth(params)
     User.create(
-      email: auth.info.email,
-      first_name: auth.info.first_name,
-      last_name: auth.info.last_name,
-      uid: auth.uid,
-      provider: auth.provider,
+      email: params[:email],
+      first_name: params[:first_name],
+      last_name: params[:last_name],
+      uid: params[:id],
+      provider: params[:provider]
     )
   end
 end

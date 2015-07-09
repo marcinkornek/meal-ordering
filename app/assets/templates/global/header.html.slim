@@ -3,7 +3,7 @@ nav.navbar.navbar-default
     .navbar-header
       button.navbar-toggle.collapsed aria-expanded="false" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"
         span.sr-only Toggle navigation
-      a.navbar-brand href="#" Meal Order
+      a.navbar-brand ui-sref="home" Meal Order
 
     ul.nav.navbar-nav.navbar-right
       li dropdown="" is-open="status.isopen1"
@@ -27,7 +27,7 @@ nav.navbar.navbar-default
           span.caret
         ul.dropdown-menu role="menu"
           li
-            a ui-sref="users_show({user_id: data.user.id})"
+            a ui-sref="users_show"
               | Account
           li.divider
           li

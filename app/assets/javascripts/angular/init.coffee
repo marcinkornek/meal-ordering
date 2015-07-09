@@ -41,12 +41,6 @@ angular.module('MealOrdering', [
     $translateProvider.useLoader('railsLocalesLoader')
     $translateProvider.preferredLanguage('pl')
 
-
-  .config ["$httpProvider", (provider) ->
-    provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
-  ]
-
-
 # ###
 # http://stackoverflow.com/a/22540482/3922041
 # ###

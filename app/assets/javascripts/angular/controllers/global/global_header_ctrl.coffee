@@ -7,7 +7,7 @@ GlobalHeaderCtrl = ($scope, $state, $translate, $cookies, principal, sessionData
       $scope.data = {}
       window.currentUser = {}
       principal.authenticate(null)
-      $state.go('home', {}, {reload: true})
+      $state.go('login')
     )
 
   # language

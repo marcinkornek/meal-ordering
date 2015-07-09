@@ -4,6 +4,6 @@
       ' {{ "SESSION_NEW_SIGN_IN_TITLE" | translate }}
 
     .oauth-login.text-center
-      a href='/auth/facebook' class="btn btn-facebook width342" ng-click="$event.stopPropagation()"
+      a ng-click='loginFB()' class="btn btn-facebook width342"
         i class="fa fa-facebook-square"
         ' {{ "SESSION_NEW_SIGN_IN_WITH_FACEBOOK" | translate }}
