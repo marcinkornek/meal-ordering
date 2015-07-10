@@ -1,0 +1,7 @@
+/*
+ * Include the css files needed for javascript tests.
+ */
+meta.foundation-data-attribute-namespace { font-family: false; }
+
+.n-hide { display: none; }
+.hide { display: none; }

@@ -34,6 +34,10 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-Font-Awesome'
   gem 'rails-assets-angular-cookies'
   gem 'rails-assets-underscore'
+  gem 'rails-assets-jasmine'
+  gem 'rails-assets-jasmine-jquery'
+  gem 'rails-assets-jasmine-ajax'
+  gem 'rails-assets-angular-mocks'
 end
 
 group :development, :test do
@@ -43,6 +47,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'quiet_assets'
+  gem 'jasmine-rails'
 end
 
 group :development do
