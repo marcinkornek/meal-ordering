@@ -8,6 +8,7 @@
 //= require angular-bootstrap
 //= require angular-cookies
 //= require underscore
+//= require ngDialog
 //
 //= require ./angular/init
 //= require ./angular/routes

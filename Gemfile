@@ -38,6 +38,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-jasmine-jquery'
   gem 'rails-assets-jasmine-ajax'
   gem 'rails-assets-angular-mocks'
+  gem 'rails-assets-ngDialog'
 end
 
 group :development, :test do

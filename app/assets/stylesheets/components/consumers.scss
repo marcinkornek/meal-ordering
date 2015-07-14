@@ -7,3 +7,13 @@
 .consumer {
   margin-top: 5px;
 }
+
+.consumer__content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.consumer__content--left {
+  flex: 1;
+}

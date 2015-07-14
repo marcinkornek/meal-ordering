@@ -19,6 +19,7 @@ pl:
   'CONSUMER_INDEX_FIRST_NAME': 'imię'
   'CONSUMER_INDEX_LAST_NAME': 'nazwisko'
   'CONSUMER_INDEX_ADD_USER_LINK': "Dodaj użytkownika"
+  'CONSUMER_INDEX_DELETE_LINK': "Usuń"
 
   'CONSUMER_NEW_TITLE': 'dodaj użytkownika'
   'CONSUMER_NEW': 'Dodaj'
@@ -35,3 +36,8 @@ pl:
   'ERROR_LAST_NAME_REQUIRED': 'Nazwisko jest wymagane'
   'ERROR_LAST_NAME_SHORT': 'Nazwisko jest zbyt krótkie (min 3 znaki)'
   'ERROR_LAST_NAME_LONG': 'Nazwisko jest zbyt długie (max 30 znaków)'
+
+  # MODAlS
+  'MODAL_DELETE_CONFIRMATION_MESSAGE': "Jesteś pewny?"
+  'MODAL_DELETE_CONFIRMATION_YES': 'Tak'
+  'MODAL_DELETE_CONFIRMATION_CANCEL': 'Anuluj'

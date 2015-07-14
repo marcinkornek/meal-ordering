@@ -19,6 +19,7 @@ en:
   'CONSUMER_INDEX_FIRST_NAME': 'first name'
   'CONSUMER_INDEX_LAST_NAME': 'last name'
   'CONSUMER_INDEX_ADD_USER_LINK': 'Add user'
+  'CONSUMER_INDEX_DELETE_LINK': "Delete"
 
   'CONSUMER_NEW_TITLE': 'add consumer'
   'CONSUMER_NEW': 'Create'
@@ -35,3 +36,8 @@ en:
   'ERROR_LAST_NAME_REQUIRED': 'Last name is required'
   'ERROR_LAST_NAME_SHORT': 'Last name is too short (min 3 char.)'
   'ERROR_LAST_NAME_LONG': 'Last name is too long (max 30 char.)'
+
+  # MODAlS
+  'MODAL_DELETE_CONFIRMATION_MESSAGE': "Are you sure?"
+  'MODAL_DELETE_CONFIRMATION_YES': 'Yes'
+  'MODAL_DELETE_CONFIRMATION_CANCEL': 'Cancel'

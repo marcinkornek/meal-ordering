@@ -8,10 +8,14 @@ button.btn.btn-success ui-sref='consumers_new'
 .consumers
   .consumer ng-repeat="consumer in data.consumers"
     .panel.panel-default style="margin-bottom: 5px"
-      .panel-body
-        .consumer__first-name
-        ' {{ "CONSUMER_INDEX_FIRST_NAME" | translate }}:
-        ' {{ consumer.first_name }}
-        .consumer__last-name
-        ' {{ "CONSUMER_INDEX_LAST_NAME" | translate }}:
-        ' {{ consumer.last_name }}
+      .panel-body.consumer__content
+        .consumer__content--left
+          .consumer__first-name
+            ' {{ "CONSUMER_INDEX_FIRST_NAME" | translate }}:
+            ' {{ consumer.first_name }}
+          .consumer__last-name
+            ' {{ "CONSUMER_INDEX_LAST_NAME" | translate }}:
+            ' {{ consumer.last_name }}
+        .consumer__content--right
+          a ng-click="modalDeleteConfirmation(consumer.id)"
+            ' {{ "CONSUMER_INDEX_DELETE_LINK" | translate }}

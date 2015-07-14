@@ -150,6 +150,8 @@ GEM
       rails-assets-jquery (>= 2)
     rails-assets-jquery (2.1.4)
     rails-assets-lodash (3.10.0)
+    rails-assets-ngDialog (0.3.12)
+      rails-assets-angular (~> 1)
     rails-assets-underscore (1.8.3)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
@@ -282,6 +284,7 @@ DEPENDENCIES
   rails-assets-jasmine-ajax!
   rails-assets-jasmine-jquery!
   rails-assets-lodash!
+  rails-assets-ngDialog!
   rails-assets-underscore!
   roar-rails
   rspec-rails

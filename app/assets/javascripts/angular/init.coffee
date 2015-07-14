@@ -5,6 +5,7 @@ angular.module('MealOrdering', [
   'ngResource',
   'ui.bootstrap',
   'ngCookies',
+  'ngDialog',
 ])
   .factory 'railsLocalesLoader', ($http) ->
     (options) ->

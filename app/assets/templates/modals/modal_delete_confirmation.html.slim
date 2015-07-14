@@ -1,0 +1,9 @@
+.modal-layout style="height: 70px"
+  p
+    ' {{ 'MODAL_DELETE_CONFIRMATION_MESSAGE' | translate }}
+
+  button.btn.btn-default.modal__confirm-button ng-click="closeThisDialog(1)"
+    ' {{ 'MODAL_DELETE_CONFIRMATION_YES' | translate }}
+
+  button.btn.btn-default.modal__cancel-button ng-click="closeThisDialog()"
+    ' {{ 'MODAL_DELETE_CONFIRMATION_CANCEL' | translate }}

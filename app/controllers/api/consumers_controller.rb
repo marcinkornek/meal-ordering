@@ -28,6 +28,10 @@ class Api::ConsumersController < ApplicationController
     end
   end
 
+  def destroy
+    render json: consumer.destroy
+  end
+
   private
 
   def consumer
