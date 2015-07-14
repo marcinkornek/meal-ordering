@@ -25,6 +25,7 @@ button.btn.btn-success ui-sref='consumers_new'
               ' {{ consumer.order.price }}
               ' {{ "CURRENCY_ZL" | translate }}
         .consumer__content--right
+          ' {{ "CONSUMER_INDEX_ORDER_ORDERED" | translate }}
           .consumer__order-status
             .consumer__order-status--completed ng-show='consumer.order'
               i.fa.fa-check-circle
@@ -35,3 +36,11 @@ button.btn.btn-success ui-sref='consumers_new'
             ' {{ "CONSUMER_INDEX_DELETE_LINK" | translate }}
           a ui-sref="consumers_edit({ consumerId: consumer.id })"
             ' {{ "CONSUMER_INDEX_EDIT_LINK" | translate }}
+
+          div ng-show='consumer.order'
+            ' {{ "CONSUMER_INDEX_ORDER_DELIVERED" | translate }}
+            .consumer__order-status
+              .consumer__order-status--completed ng-hide="consumer.order.state == 'ordered'"
+                i.fa.fa-check-circle
+              .consumer__order-status--not-completed ng-show="consumer.order.state == 'ordered'"
+                i.fa.fa-times-circle

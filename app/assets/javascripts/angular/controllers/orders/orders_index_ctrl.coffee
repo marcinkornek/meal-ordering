@@ -27,19 +27,30 @@ OrdersIndexCtrl = ($scope, $state, ordersData, ngDialog) ->
     )
 
   $scope.destroyOrder = (orderId) ->
-    console.log orderId
     ordersData.delete(id: orderId
     , (consumer) ->
       $scope.destroyOrderFromOrders(consumer.id)
+    )
+
+  $scope.changeState = (orderId) ->
+    ordersData.orderDelivered({id :orderId}
+    , (order) ->
+      $scope.updateOrderInOrders(order)
+    , (error) ->
+      console.log 'error'
+      console.log error.status
+      $scope.formData.error = 'There is no such consumer'
     )
 
   $scope.destroyOrderFromOrders = (orderId) ->
     $scope.data.orders = _.reject($scope.data.orders, (el) ->
       el.id is orderId
     )
-    console.log $scope.data.remainingConsumersCount
     $scope.data.remainingConsumersCount += 1
-    console.log $scope.data.remainingConsumersCount
+
+  $scope.updateOrderInOrders = (order) ->
+    item = _.findWhere($scope.data.orders, { id: order.id })
+    item.state = order.state
 
 angular.module('MealOrdering').controller 'OrdersIndexCtrl', OrdersIndexCtrl
 OrdersIndexCtrl.$inject = ['$scope', '$state', 'ordersData', 'ngDialog']

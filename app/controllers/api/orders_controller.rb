@@ -34,6 +34,11 @@ class Api::OrdersController < ApplicationController
     render json: order.destroy
   end
 
+  def delivered
+    order.delivered
+    render json: order.extend(OrderRepresenter)
+  end
+
   private
 
   def order

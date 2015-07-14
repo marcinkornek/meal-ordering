@@ -25,7 +25,18 @@ div ng-show='data.remainingConsumersCount > 0'
             ' {{ order.consumer_name }}
 
         .order__content--right
+          ' {{ "CONSUMER_INDEX_ORDER_DELIVERED" | translate }}
+          .consumer__order-status
+            .consumer__order-status--completed ng-hide="order.state == 'ordered'"
+              i.fa.fa-check-circle
+            .consumer__order-status--not-completed ng-show="order.state == 'ordered'"
+              i.fa.fa-times-circle
+
           a ng-click="modalDeleteConfirmation(order.id)"
             ' {{ "ORDER_INDEX_DELETE_LINK" | translate }}
           a ui-sref="orders_edit({ orderId: order.id })"
             ' {{ "ORDER_INDEX_EDIT_LINK" | translate }}
+
+          div
+            button.btn.bto-default ng-click='changeState(order.id)'
+              ' {{ "ORDER_INDEX_CHANGE_DELIVERED" | translate }}

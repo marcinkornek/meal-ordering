@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   end
 
   get '/api/remaining_consumers' => 'api/consumers#remaining_consumers'
+  post '/api/order_delivered'    => 'api/orders#delivered'
 
   constraints format: 'html' do
     get '*path', controller: 'home', action: 'index'

@@ -26,6 +26,8 @@ en:
   'CONSUMER_INDEX_ADD_USER_LINK': 'Add user'
   'CONSUMER_INDEX_DELETE_LINK': "Delete"
   'CONSUMER_INDEX_EDIT_LINK': "Edit"
+  'CONSUMER_INDEX_ORDER_ORDERED': 'Ordered?'
+  'CONSUMER_INDEX_ORDER_DELIVERED': 'Delivered?'
 
   'CONSUMER_NEW_TITLE': 'add consumer'
   'CONSUMER_NEW': 'Create'
@@ -43,6 +45,7 @@ en:
   'ORDER_INDEX_REMAINING_CONSUMERS': 'Remaining consumers'
   'ORDER_INDEX_DELETE_LINK': 'Delete'
   'ORDER_INDEX_EDIT_LINK': 'Edit'
+  'ORDER_INDEX_CHANGE_DELIVERED' : 'Change state to delivered'
 
   'ORDER_NEW_TITLE': 'new order'
   'ORDER_NEW_BACK': 'Back'

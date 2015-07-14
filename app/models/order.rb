@@ -4,4 +4,9 @@ class Order < ActiveRecord::Base
   validates :consumer,     presence: true
   validates :product_name, presence: true
   validates :price,        numericality: {greater_than: 0}
+
+  def delivered
+    self.state = 'delivered'
+    self.save
+  end
 end

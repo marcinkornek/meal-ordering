@@ -45,4 +45,12 @@ describe Order do
       it { expect(order).not_to be_valid }
     end
   end
+
+  describe '#delivered' do
+    context 'change state to delivered' do
+      before { order.delivered }
+
+      it { expect(order.state).to eq('delivered') }
+    end
+  end
 end
