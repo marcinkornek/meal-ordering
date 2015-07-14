@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :consumers, dependent: :destroy
+
   validates :email,      presence: true,
                          uniqueness: {case_sensitive: false}
   validates :first_name, presence: true
