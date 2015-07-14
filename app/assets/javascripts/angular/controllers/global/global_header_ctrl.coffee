@@ -1,7 +1,8 @@
 GlobalHeaderCtrl = ($scope, $state, $translate, $cookies, principal, sessionData) ->
 
-  # functions
+  $scope.data = {}
 
+  # functions
   $scope.destroySession = ->
     sessionData.delete((response) ->
       $scope.data = {}
@@ -11,23 +12,21 @@ GlobalHeaderCtrl = ($scope, $state, $translate, $cookies, principal, sessionData
     )
 
   # language
-
   $scope.setLanguage = ->
-    $scope.data = {}
-    $scope.data.locale = $cookies.locale || 'en'
-    $translate.use $scope.data.locale
+    $scope.data.locale = $cookies.get('locale') || 'pl'
+    $translate.use($scope.data.locale)
 
-  $scope.setLanguage()
+  # $scope.setLanguage()
 
   $scope.changeLanguage = (key) ->
-    $translate.use key
-    $cookies.locale = $scope.data.locale = key
+    $translate.use(key)
+    $scope.data.locale = key
+    $cookies.put('locale', key)
 
   # loading data
-
   $scope.loadData = ->
     $scope.data.user =  window.currentUser
-    $scope.data.locale = $cookies.locale || 'pl'
+    $scope.setLanguage()
 
   $scope.loadData()
 

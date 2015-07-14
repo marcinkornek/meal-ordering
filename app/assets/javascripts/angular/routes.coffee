@@ -8,7 +8,8 @@ angular.module('MealOrdering').config ($stateProvider, $urlRouterProvider) ->
         roles: ['user']
       },
       views: {
-        'header': { controller: 'GlobalHeaderCtrl', templateUrl: 'global/header.html' }
+        'header': { controller: 'GlobalHeaderCtrl', templateUrl: 'global/header.html' },
+        "body":   { controller: 'ConsumersIndexCtrl',  templateUrl: 'consumers/consumers_index.html' },
       }
     })
 
