@@ -10,13 +10,17 @@ button.btn.btn-success ui-sref='orders_new'
     .panel.panel-default style="margin-bottom: 5px"
       .panel-body.order__content
         .order__content--left
-          .order__first-name
+          .order__product_name
             ' {{ "ORDER_INDEX_PRODUCT_NAME" | translate }}:
             ' {{ order.product_name }}
-          .order__last-name
+          .order__price
             ' {{ "ORDER_INDEX_PRICE" | translate }}:
             ' {{ order.price }}
-            ' {{ "CURRENCY_ZL" | translate }}:
+            ' {{ "CURRENCY_ZL" | translate }}
+          .order__consumer
+            ' {{ "ORDER_INDEX_CONSUMER_NAME" | translate }}:
+            ' {{ order.consumer_name }}
+
         .order__content--right
           a ng-click="modalDeleteConfirmation(order.id)"
             ' {{ "ORDER_INDEX_DELETE_LINK" | translate }}

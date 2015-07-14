@@ -16,7 +16,21 @@ button.btn.btn-success ui-sref='consumers_new'
           .consumer__last-name
             ' {{ "CONSUMER_INDEX_LAST_NAME" | translate }}:
             ' {{ consumer.last_name }}
+          .consumer__order ng-show='consumer.order'
+            .consumer__order-product_name
+              ' {{ "CONSUMER_INDEX_PRODUCT_NAME" | translate }}:
+              ' {{ consumer.order.product_name }}
+            .consumer__order-price
+              ' {{ "CONSUMER_INDEX_PRICE" | translate }}:
+              ' {{ consumer.order.price }}
+              ' {{ "CURRENCY_ZL" | translate }}
         .consumer__content--right
+          .consumer__order-status
+            .consumer__order-status--completed ng-show='consumer.order'
+              i.fa.fa-check-circle
+            .consumer__order-status--not-completed ng-hide='consumer.order'
+              i.fa.fa-times-circle
+
           a ng-click="modalDeleteConfirmation(consumer.id)"
             ' {{ "CONSUMER_INDEX_DELETE_LINK" | translate }}
           a ui-sref="consumers_edit({ consumerId: consumer.id })"

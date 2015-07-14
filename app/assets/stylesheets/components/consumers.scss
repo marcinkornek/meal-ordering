@@ -17,3 +17,17 @@
 .consumer__content--left {
   flex: 1;
 }
+
+.consumer__order-status {
+  display: inline-block;
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.consumer__order-status--completed {
+  color: $forest-green;
+}
+
+.consumer__order-status--not-completed {
+  color: $sunset-red;
+}

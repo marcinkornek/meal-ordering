@@ -3,18 +3,18 @@ class Api::ConsumersController < ApplicationController
 
   def index
     consumers = current_user.consumers
-    render json: consumers
+    render json: consumers.extend(ConsumersRepresenter)
   end
 
   def show
-    render json: consumer
+    render json: consumer.extend(ConsumerRepresenter)
   end
 
   def create
     consumer = Consumer.new(consumer_params)
     consumer.user = current_user
     if consumer.save
-      render json: consumer
+      render json: consumer.extend(ConsumerRepresenter)
     else
       render json: consumer.errors, status: :not_acceptable
     end
@@ -22,7 +22,7 @@ class Api::ConsumersController < ApplicationController
 
   def update
     if consumer.update_attributes(consumer_params)
-      render json: consumer
+      render json: consumer.extend(ConsumerRepresenter)
     else
       render json: consumer.errors, status: :not_acceptable
     end

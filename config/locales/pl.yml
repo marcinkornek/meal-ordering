@@ -6,6 +6,7 @@ pl:
   'HEADER_ACCOUNT_LINK': 'Konto'
   'HEADER_LOGOUT_LINK': 'Wyloguj się'
   'HEADER_CONSUMERS_LINK': 'Użytkownicy'
+  'HEADER_ORDERS_LINK': 'Zamówienia'
 
   # SESSION
   'SESSION_NEW_SIGN_IN_TITLE': 'Zaloguj się'
@@ -20,6 +21,8 @@ pl:
   'CONSUMER_INDEX_TITLE': 'użytkownicy'
   'CONSUMER_INDEX_FIRST_NAME': 'imię'
   'CONSUMER_INDEX_LAST_NAME': 'nazwisko'
+  'CONSUMER_INDEX_PRODUCT_NAME': 'Nazwa produktu'
+  'CONSUMER_INDEX_PRICE': 'Cena'
   'CONSUMER_INDEX_ADD_USER_LINK': "Dodaj użytkownika"
   'CONSUMER_INDEX_DELETE_LINK': "Usuń"
   'CONSUMER_INDEX_EDIT_LINK': "Edytuj"
@@ -36,6 +39,7 @@ pl:
   'ORDER_INDEX_ADD_ORDER_LINK': 'Dodaj zamówienie'
   'ORDER_INDEX_PRODUCT_NAME': 'Nazwa produktu'
   'ORDER_INDEX_PRICE': 'Cena'
+  'ORDER_INDEX_CONSUMER_NAME': 'Użytkownik'
   'ORDER_INDEX_DELETE_LINK': 'Usuń'
   'ORDER_INDEX_EDIT_LINK': 'Edytuj'
 

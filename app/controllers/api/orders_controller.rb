@@ -3,13 +3,13 @@ class Api::OrdersController < ApplicationController
 
   def index
     orders = current_user.consumers.map(&:order).compact
-    render json: orders
+    render json: orders.extend(OrdersRepresenter)
   end
 
   def create
     order = Order.new(order_params)
     if order.save
-      render json: order
+      render json: order.extend(OrderRepresenter)
     else
       render json: order.errors, status: :not_acceptable
     end

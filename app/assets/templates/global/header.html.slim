@@ -10,6 +10,9 @@ nav.navbar.navbar-default
       li
         a ui-sref='consumers_index'
           ' {{ "HEADER_CONSUMERS_LINK" | translate }}
+        li
+          a ui-sref='orders_index'
+            ' {{ "HEADER_ORDERS_LINK" | translate }}
 
       li dropdown="" is-open="status.isopen1"
         a.dropdown-toggle dropdown-toggle="" ng-disabled="disabled" type="button"
