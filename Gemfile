@@ -30,6 +30,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-angular-resource'
   gem 'rails-assets-angular-translate'
   gem 'rails-assets-angular-bootstrap'
+  gem 'rails-assets-angular-sanitize'
   gem 'rails-assets-bootstrap'
   gem 'rails-assets-Font-Awesome'
   gem 'rails-assets-angular-cookies'
@@ -39,6 +40,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-jasmine-ajax'
   gem 'rails-assets-angular-mocks'
   gem 'rails-assets-ngDialog'
+  gem 'rails-assets-angular-ui-select'
 end
 
 group :development, :test do

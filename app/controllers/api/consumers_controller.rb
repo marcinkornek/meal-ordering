@@ -32,6 +32,10 @@ class Api::ConsumersController < ApplicationController
     render json: consumer.destroy
   end
 
+  def remaining_consumers
+    render json: Consumer.remaining_consumers(current_user.consumers)
+  end
+
   private
 
   def consumer

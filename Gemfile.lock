@@ -136,10 +136,14 @@ GEM
       rails-assets-angular (= 1.4.2)
     rails-assets-angular-resource (1.4.2)
       rails-assets-angular (= 1.4.2)
+    rails-assets-angular-sanitize (1.4.2)
+      rails-assets-angular (= 1.4.2)
     rails-assets-angular-translate (2.7.2)
       rails-assets-angular (>= 1.2.26, <= 1.5)
     rails-assets-angular-ui-router (0.2.15)
       rails-assets-angular (>= 1.0.8)
+    rails-assets-angular-ui-select (0.12.0)
+      rails-assets-angular (>= 1.2.18)
     rails-assets-bootstrap (3.3.5)
       rails-assets-jquery (>= 1.9.1)
     rails-assets-jasmine (2.3.4)
@@ -277,8 +281,10 @@ DEPENDENCIES
   rails-assets-angular-cookies!
   rails-assets-angular-mocks!
   rails-assets-angular-resource!
+  rails-assets-angular-sanitize!
   rails-assets-angular-translate!
   rails-assets-angular-ui-router!
+  rails-assets-angular-ui-select!
   rails-assets-bootstrap!
   rails-assets-jasmine!
   rails-assets-jasmine-ajax!

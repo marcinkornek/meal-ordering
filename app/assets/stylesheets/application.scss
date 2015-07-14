@@ -11,6 +11,8 @@
  * file per style scope.
  *
  *= require_self
+ *= require select
+ *= require angular-ui-select
  *= require bootstrap
  *= require Font-Awesome
  *= require ngDialog

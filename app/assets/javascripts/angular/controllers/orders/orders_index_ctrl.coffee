@@ -6,7 +6,6 @@ OrdersIndexCtrl = ($scope, $state, ordersData) ->
     $scope.data = {}
     ordersData.query({}
     , (orders) ->
-      console.log orders
       $scope.data.orders = orders
     , (error) ->
       console.log 'error'

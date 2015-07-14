@@ -78,3 +78,13 @@ angular.module('MealOrdering').config ($stateProvider, $urlRouterProvider) ->
         "body":   { controller: 'OrdersIndexCtrl',  templateUrl: 'orders/orders_index.html' },
       }
     })
+    .state('orders_new', {
+      url: '/orders/new',
+      data: {
+        roles: ['user']
+      },
+      views: {
+        "header": { controller: 'GlobalHeaderCtrl', templateUrl: 'global/header.html' },
+        "body":   { controller: 'OrdersNewCtrl',  templateUrl: 'orders/orders_new.html' },
+      }
+    })

@@ -39,9 +39,20 @@ en:
   'ORDER_INDEX_DELETE_LINK': 'Delete'
   'ORDER_INDEX_EDIT_LINK': 'Edit'
 
+  'ORDER_NEW_TITLE': 'new order'
+  'ERROR_PRODUCT_NAME_REQUIRED': 'Product name is required'
+  'ERROR_PRODUCT_NAME_SHORT': 'Product name is too short (min 3 char.)'
+  'ERROR_PRODUCT_NAME_LONG': 'Product name is too long (max 30 char.)'
+  'ERROR_PRICE_REQUIRED': 'Price is required'
+  'ORDER_NEW_BACK': 'Back'
+  'ORDER_NEW': 'Create'
+
   # PLACEHOLDERS
   'FIRST_NAME_PLACEHOLDER': 'First name'
   'LAST_NAME_PLACEHOLDER': 'Last name'
+
+  'PRODUCT_NAME_PLACEHOLDER': 'Product name'
+  'PRICE_PLACEHOLDER': 'Price'
 
   # ERRORS
   'ERROR_FIRST_NAME_REQUIRED': 'First name is required'

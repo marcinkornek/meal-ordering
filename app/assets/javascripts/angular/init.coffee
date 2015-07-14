@@ -6,6 +6,8 @@ angular.module('MealOrdering', [
   'ui.bootstrap',
   'ngCookies',
   'ngDialog',
+  'ui.select',
+  'ngSanitize',
 ])
   .factory 'railsLocalesLoader', ($http) ->
     (options) ->

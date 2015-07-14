@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     resources :orders,    only: [:index, :show, :create, :update, :destroy]
   end
 
+  get '/api/remaining_consumers' => 'api/consumers#remaining_consumers'
+
   constraints format: 'html' do
     get '*path', controller: 'home', action: 'index'
   end

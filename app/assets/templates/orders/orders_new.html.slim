@@ -1,0 +1,37 @@
+.orders__title
+  ' {{ "ORDER_NEW_TITLE" | translate }}
+
+form(style='width:50%;margin-left:auto;margin-right:auto' name='createOrderForm')
+  .form-field
+    ui-select ng-disabled="disabled" ng-model="formData.consumer" reset-search-input="false" style="width: 100%;" theme="bootstrap"
+      ui-select-match placeholder="Select or search a consumer in the list..." {{$select.selected.first_name + ' ' + $select.selected.last_name}}
+      ui-select-choices repeat="consumer in data.consumers | filter: $select.search"
+        div ng-bind-html="consumer.first_name + ' ' + consumer.last_name | highlight: $select.search"
+
+  .form-field
+    input.form-control.span12(type="text" maxlength="30" name="product_name" placeholder="{{ 'PRODUCT_NAME_PLACEHOLDER' | translate }}" ng-model="formData.product_name" required ng-minlength='3' ng-maxlength='30')
+
+      .form-field__errors ng-show="createOrderForm.product_name.$touched && createOrderForm.product_name.$dirty"
+        .form-field__error ng-show="createOrderForm.product_name.$error.required"
+          ' {{ "ERROR_PRODUCT_NAME_REQUIRED" | translate }}
+        .form-field__error ng-show="createOrderForm.product_name.$error.minlength"
+          ' {{ "ERROR_PRODUCT_NAME_SHORT" | translate }}
+        .form-field__error ng-show="createOrderForm.product_name.$error.maxlength"
+          ' {{ "ERROR_PRODUCT_NAME_LONG" | translate }}
+
+  .form-field
+    input.form-control.span12(type="text" name="price" placeholder="{{ 'PRICE_PLACEHOLDER' | translate }}" ng-model="formData.price" required)
+
+      .form-field__errors ng-show="createOrderForm.price.$touched && createOrderForm.price.$dirty"
+        .form-field__error ng-show="createOrderForm.price.$error.required"
+          ' {{ "ERROR_PRICE_REQUIRED" | translate }}
+
+  .navigation-buttons
+    .navigation-buttons--left
+      button.btn.btn-default ui-sref='orders_index'
+        ' {{ "ORDER_NEW_BACK" | translate }}
+
+    .navigation-buttons--right
+      button.btn.btn-primary ng-click="createOrder()"
+        ' {{ "ORDER_NEW" | translate }}
+

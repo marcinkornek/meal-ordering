@@ -7,8 +7,11 @@
 //= require angular-resource
 //= require angular-bootstrap
 //= require angular-cookies
+//= require angular-sanitize
 //= require underscore
 //= require ngDialog
+//= require angular-ui-select
+//= require select
 //
 //= require ./angular/init
 //= require ./angular/routes

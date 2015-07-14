@@ -3,5 +3,6 @@ angular.module('MealOrdering').factory "consumersData", ($resource) ->
     {
       update: {method: "PUT"},
       query:  {method: "GET", isArray: true},
+      loadRemainingConsumers: {method: "GET", url: '/api/remaining_consumers', isArray: true}
     }
   )
