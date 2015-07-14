@@ -44,10 +44,6 @@ en:
   'ORDER_INDEX_EDIT_LINK': 'Edit'
 
   'ORDER_NEW_TITLE': 'new order'
-  'ERROR_PRODUCT_NAME_REQUIRED': 'Product name is required'
-  'ERROR_PRODUCT_NAME_SHORT': 'Product name is too short (min 3 char.)'
-  'ERROR_PRODUCT_NAME_LONG': 'Product name is too long (max 30 char.)'
-  'ERROR_PRICE_REQUIRED': 'Price is required'
   'ORDER_NEW_BACK': 'Back'
   'ORDER_NEW': 'Create'
 
@@ -65,6 +61,11 @@ en:
   'ERROR_LAST_NAME_REQUIRED': 'Last name is required'
   'ERROR_LAST_NAME_SHORT': 'Last name is too short (min 3 char.)'
   'ERROR_LAST_NAME_LONG': 'Last name is too long (max 30 char.)'
+  'ERROR_PRODUCT_NAME_REQUIRED': 'Product name is required'
+  'ERROR_PRODUCT_NAME_SHORT': 'Product name is too short (min 3 char.)'
+  'ERROR_PRODUCT_NAME_LONG': 'Product name is too long (max 30 char.)'
+  'ERROR_PRICE_REQUIRED': 'Price is required'
+  'ERROR_PRICE_PATTERN': 'Price must be a number'
 
   # MODAlS
   'MODAL_DELETE_CONFIRMATION_MESSAGE': "Are you sure?"

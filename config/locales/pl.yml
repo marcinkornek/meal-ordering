@@ -44,10 +44,6 @@ pl:
   'ORDER_INDEX_EDIT_LINK': 'Edytuj'
 
   'ORDER_NEW_TITLE': 'nowe zamówienie'
-  'ERROR_PRODUCT_NAME_REQUIRED': 'Nazwa produktu jest wymagana'
-  'ERROR_PRODUCT_NAME_SHORT': 'Nazwa produktu jest zbyt krótka (min 3 znaki)'
-  'ERROR_PRODUCT_NAME_LONG': 'Nazwa produktu jest zbyt długa (max 30 znaków)'
-  'ERROR_PRICE_REQUIRED': 'Cena jest wymagana'
   'ORDER_NEW_BACK': 'Wstecz'
   'ORDER_NEW': 'Dodaj'
 
@@ -65,6 +61,11 @@ pl:
   'ERROR_LAST_NAME_REQUIRED': 'Nazwisko jest wymagane'
   'ERROR_LAST_NAME_SHORT': 'Nazwisko jest zbyt krótkie (min 3 znaki)'
   'ERROR_LAST_NAME_LONG': 'Nazwisko jest zbyt długie (max 30 znaków)'
+  'ERROR_PRODUCT_NAME_REQUIRED': 'Nazwa produktu jest wymagana'
+  'ERROR_PRODUCT_NAME_SHORT': 'Nazwa produktu jest zbyt krótka (min 3 znaki)'
+  'ERROR_PRODUCT_NAME_LONG': 'Nazwa produktu jest zbyt długa (max 30 znaków)'
+  'ERROR_PRICE_REQUIRED': 'Cena jest wymagana'
+  'ERROR_PRICE_PATTERN': 'Cena musi być liczbą'
 
   # MODAlS
   'MODAL_DELETE_CONFIRMATION_MESSAGE': "Jesteś pewny?"

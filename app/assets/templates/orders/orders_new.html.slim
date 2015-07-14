@@ -20,11 +20,13 @@ form(style='width:50%;margin-left:auto;margin-right:auto' name='createOrderForm'
           ' {{ "ERROR_PRODUCT_NAME_LONG" | translate }}
 
   .form-field
-    input.form-control.span12(type="text" name="price" placeholder="{{ 'PRICE_PLACEHOLDER' | translate }}" ng-model="formData.price" required)
+    input.form-control.span12(type="text" maxlength="9" name="price" placeholder="{{ 'PRICE_PLACEHOLDER' | translate }}" ng-model="formData.price" required ng-pattern="/^\d+(\.\d{1,2})?$/")
 
       .form-field__errors ng-show="createOrderForm.price.$touched && createOrderForm.price.$dirty"
         .form-field__error ng-show="createOrderForm.price.$error.required"
           ' {{ "ERROR_PRICE_REQUIRED" | translate }}
+        .field-error ng-show="createOrderForm.price.$error.pattern"
+          ' {{ "ERROR_PRICE_PATTERN" | translate }}
 
   .navigation-buttons
     .navigation-buttons--left
@@ -34,4 +36,3 @@ form(style='width:50%;margin-left:auto;margin-right:auto' name='createOrderForm'
     .navigation-buttons--right
       button.btn.btn-primary ng-click="createOrder()"
         ' {{ "ORDER_NEW" | translate }}
-
