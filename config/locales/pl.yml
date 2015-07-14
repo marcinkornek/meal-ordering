@@ -20,10 +20,14 @@ pl:
   'CONSUMER_INDEX_LAST_NAME': 'nazwisko'
   'CONSUMER_INDEX_ADD_USER_LINK': "Dodaj użytkownika"
   'CONSUMER_INDEX_DELETE_LINK': "Usuń"
+  'CONSUMER_INDEX_EDIT_LINK': "Edytuj"
 
   'CONSUMER_NEW_TITLE': 'dodaj użytkownika'
   'CONSUMER_NEW': 'Dodaj'
   'CONSUMER_NEW_BACK': 'Wstecz'
+
+  'CONSUMER_EDIT_TITLE': 'edytuj użytkownika'
+  'CONSUMER_EDIT': 'Aktualizuj'
 
   # PLACEHOLDERS
   'FIRST_NAME_PLACEHOLDER': 'Imię'

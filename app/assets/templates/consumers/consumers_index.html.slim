@@ -19,3 +19,5 @@ button.btn.btn-success ui-sref='consumers_new'
         .consumer__content--right
           a ng-click="modalDeleteConfirmation(consumer.id)"
             ' {{ "CONSUMER_INDEX_DELETE_LINK" | translate }}
+          a ui-sref="consumers_edit({ consumerId: consumer.id })"
+            ' {{ "CONSUMER_INDEX_EDIT_LINK" | translate }}

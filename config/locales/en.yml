@@ -20,10 +20,14 @@ en:
   'CONSUMER_INDEX_LAST_NAME': 'last name'
   'CONSUMER_INDEX_ADD_USER_LINK': 'Add user'
   'CONSUMER_INDEX_DELETE_LINK': "Delete"
+  'CONSUMER_INDEX_EDIT_LINK': "Edit"
 
   'CONSUMER_NEW_TITLE': 'add consumer'
   'CONSUMER_NEW': 'Create'
   'CONSUMER_NEW_BACK': 'Back'
+
+  'CONSUMER_EDIT_TITLE': 'edit consumer'
+  'CONSUMER_EDIT': 'Update'
 
   # PLACEHOLDERS
   'FIRST_NAME_PLACEHOLDER': 'First name'
