@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resource :session,    only: [:create, :destroy]
     resource :users,      only: [:show]
     resources :consumers, only: [:index, :show, :create, :update, :destroy]
+    resources :orders,    only: [:index, :show, :create, :update, :destroy]
   end
 
   constraints format: 'html' do

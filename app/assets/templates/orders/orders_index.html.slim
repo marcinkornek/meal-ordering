@@ -1,0 +1,24 @@
+.orders__title
+  ' {{ "ORDER_INDEX_TITLE" | translate }}
+
+button.btn.btn-success ui-sref='orders_new'
+  i.fa.fa-plus
+  '  {{ "ORDER_INDEX_ADD_ORDER_LINK" | translate }}
+
+.orders
+  .order ng-repeat="order in data.orders"
+    .panel.panel-default style="margin-bottom: 5px"
+      .panel-body.order__content
+        .order__content--left
+          .order__first-name
+            ' {{ "ORDER_INDEX_PRODUCT_NAME" | translate }}:
+            ' {{ order.product_name }}
+          .order__last-name
+            ' {{ "ORDER_INDEX_PRICE" | translate }}:
+            ' {{ order.price }}
+            ' {{ "CURRENCY_ZL" | translate }}:
+        .order__content--right
+          a ng-click="modalDeleteConfirmation(order.id)"
+            ' {{ "ORDER_INDEX_DELETE_LINK" | translate }}
+          a ui-sref="orders_edit({ orderId: order.id })"
+            ' {{ "ORDER_INDEX_EDIT_LINK" | translate }}

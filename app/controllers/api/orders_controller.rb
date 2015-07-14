@@ -2,7 +2,7 @@ class Api::OrdersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    orders = current_user.consumers.map(&:order)
+    orders = current_user.consumers.map(&:order).compact
     render json: orders
   end
 

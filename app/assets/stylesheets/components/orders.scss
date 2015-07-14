@@ -1,0 +1,19 @@
+.orders__title {
+  font-size: 22px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.order {
+  margin-top: 5px;
+}
+
+.order__content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.order__content--left {
+  flex: 1;
+}

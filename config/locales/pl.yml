@@ -1,4 +1,6 @@
 pl:
+  'CURRENCY_ZL': 'zł'
+
   # HEADER
   'HEADER_APP_NAME': 'Zamawianie posiłków'
   'HEADER_ACCOUNT_LINK': 'Konto'
@@ -28,6 +30,14 @@ pl:
 
   'CONSUMER_EDIT_TITLE': 'edytuj użytkownika'
   'CONSUMER_EDIT': 'Aktualizuj'
+
+  # ORDERS
+  'ORDER_INDEX_TITLE': "zamówienia"
+  'ORDER_INDEX_ADD_ORDER_LINK': 'Dodaj zamówienie'
+  'ORDER_INDEX_PRODUCT_NAME': 'Nazwa produktu'
+  'ORDER_INDEX_PRICE': 'Cena'
+  'ORDER_INDEX_DELETE_LINK': 'Usuń'
+  'ORDER_INDEX_EDIT_LINK': 'Edytuj'
 
   # PLACEHOLDERS
   'FIRST_NAME_PLACEHOLDER': 'Imię'

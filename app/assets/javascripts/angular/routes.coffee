@@ -11,6 +11,8 @@ angular.module('MealOrdering').config ($stateProvider, $urlRouterProvider) ->
         'header': { controller: 'GlobalHeaderCtrl', templateUrl: 'global/header.html' }
       }
     })
+
+    # SESSION
     .state('login', {
       url: '/login',
       data: {
@@ -20,6 +22,8 @@ angular.module('MealOrdering').config ($stateProvider, $urlRouterProvider) ->
         'body': { controller: 'LoginCtrl', templateUrl: 'login/login.html' }
       }
     })
+
+    # USERS
     .state('users_show', {
       url: '/account',
       data: {
@@ -30,6 +34,8 @@ angular.module('MealOrdering').config ($stateProvider, $urlRouterProvider) ->
         "body":   { controller: 'UserShowCtrl',  templateUrl: 'users/user_show.html' },
       }
     })
+
+    # CUSTOMERS
     .state('consumers_index', {
       url: '/consumers',
       data: {
@@ -58,5 +64,17 @@ angular.module('MealOrdering').config ($stateProvider, $urlRouterProvider) ->
       views: {
         "header": { controller: 'GlobalHeaderCtrl', templateUrl: 'global/header.html' },
         "body":   { controller: 'ConsumersEditCtrl',  templateUrl: 'consumers/consumers_edit.html' },
+      }
+    })
+
+    # ORDERS
+    .state('orders_index', {
+      url: '/orders',
+      data: {
+        roles: ['user']
+      },
+      views: {
+        "header": { controller: 'GlobalHeaderCtrl', templateUrl: 'global/header.html' },
+        "body":   { controller: 'OrdersIndexCtrl',  templateUrl: 'orders/orders_index.html' },
       }
     })
