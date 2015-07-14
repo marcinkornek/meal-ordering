@@ -24,7 +24,6 @@ OrdersNewCtrl = ($scope, $state, ordersData, consumersData, $http) ->
     if $scope.isFormValid()
       ordersData.save({}, $scope.formData
       , (success) ->
-        console.log success
         $state.go('orders_index')
       , (error) ->
         console.log 'error'

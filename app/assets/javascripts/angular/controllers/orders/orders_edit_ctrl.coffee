@@ -13,7 +13,6 @@ OrdersEditCtrl = ($scope, $state, $stateParams, ordersData, consumersData, $http
     orderId = $stateParams.orderId
     ordersData.get({id: orderId}
     , (order) ->
-      console.log order
       $scope.formData.product_name = order.product_name
       $scope.formData.price = order.price
       $scope.formData.consumer = order.consumer
@@ -50,7 +49,6 @@ OrdersEditCtrl = ($scope, $state, $stateParams, ordersData, consumersData, $http
     if $scope.isFormValid()
       ordersData.update({}, $scope.formData
       , (success) ->
-        console.log success
         $state.go('orders_index')
       , (error) ->
         console.log 'error'

@@ -6,7 +6,6 @@ ConsumersNewCtrl = ($scope, $state, consumersData) ->
     if $scope.isFormValid()
       consumersData.save({}, $scope.formData
       , (success) ->
-        console.log success
         $state.go('consumers_index')
       , (error) ->
         console.log 'error'

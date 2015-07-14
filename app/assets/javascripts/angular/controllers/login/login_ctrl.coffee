@@ -4,7 +4,6 @@ LoginCtrl = ($scope, $state, sessionData) ->
 
   window.fbAsyncInit = ->
     FB.Event.subscribe "auth.statusChange", (response) ->
-      console.log 'status change', response
       $scope.statusChangeCallback(response)
 
     FB.init

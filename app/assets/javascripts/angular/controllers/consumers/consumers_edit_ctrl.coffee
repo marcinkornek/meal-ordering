@@ -13,7 +13,6 @@ ConsumersEditCtrl = ($scope, $state, $stateParams, consumersData) ->
     consumerId = $stateParams.consumerId
     consumersData.get({id: consumerId}
     , (consumer) ->
-      console.log consumer
       $scope.formData.first_name = consumer.first_name
       $scope.formData.last_name = consumer.last_name
       $scope.formData.id = consumer.id
@@ -31,7 +30,6 @@ ConsumersEditCtrl = ($scope, $state, $stateParams, consumersData) ->
     if $scope.isFormValid()
       consumersData.update({id: consumerId}, $scope.formData
       , (success) ->
-        console.log success
         $state.go('consumers_index')
       , (error) ->
         console.log 'error'
