@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   namespace :api, defaults: {format: :json} do
-    resource :session, only: [:create, :destroy]
-    resource :users,   only: [:show]
+    resource :session,    only: [:create, :destroy]
+    resource :users,      only: [:show]
+    resources :consumers, only: [:index, :create, :update, :destroy]
   end
 
   constraints format: 'html' do
