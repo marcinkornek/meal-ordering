@@ -8,3 +8,7 @@ en:
   'USER_SHOW_EMAIL': 'email'
   'USER_SHOW_NAME': 'name'
   'USER_SHOW_ROLE': 'role'
+
+  # CONSUMERS
+  'CONSUMER_INDEX_FIRST_NAME': 'first name'
+  'CONSUMER_INDEX_LAST_NAME': 'last name'

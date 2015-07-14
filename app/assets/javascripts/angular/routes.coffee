@@ -30,3 +30,13 @@ angular.module('MealOrdering').config ($stateProvider, $urlRouterProvider) ->
         "body":   { controller: 'UserShowCtrl',  templateUrl: 'users/user_show.html' },
       }
     })
+    .state('consumers_index', {
+      url: '/consumers',
+      data: {
+        roles: ['user']
+      },
+      views: {
+        "header": { controller: 'GlobalHeaderCtrl', templateUrl: 'global/header.html' },
+        "body":   { controller: 'ConsumersIndexCtrl',  templateUrl: 'consumers/consumers_index.html' },
+      }
+    })

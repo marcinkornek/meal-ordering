@@ -1,0 +1,9 @@
+.consumers ng-repeat="consumer in data.consumers"
+  .panel.panel-default style="margin-top: 5px"
+    .panel-body.consumer
+      .consumer__first-name
+      ' {{ "CONSUMER_INDEX_FIRST_NAME" | translate }}:
+      ' {{ consumer.first_name }}
+      .consumer__last-name
+      ' {{ "CONSUMER_INDEX_LAST_NAME" | translate }}:
+      ' {{ consumer.last_name }}
