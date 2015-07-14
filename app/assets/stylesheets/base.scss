@@ -1,3 +1,16 @@
 a {
   cursor: pointer;
 }
+
+.navigation-buttons {
+  margin-top: 5px;
+}
+
+.navigation-buttons--left {
+  display: inline-block;
+}
+
+.navigation-buttons--right {
+  display: inline-block;
+  float: right;
+}

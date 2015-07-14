@@ -1,4 +1,9 @@
 en:
+  # HEADER
+  'HEADER_APP_NAME': 'Meal order'
+  'HEADER_ACCOUNT_LINK': 'Account'
+  'HEADER_LOGOUT_LINK': 'Logout'
+  'HEADER_CONSUMERS_LINK': 'Consumers'
 
   # SESSION
   'SESSION_NEW_SIGN_IN_TITLE': 'Login'
@@ -10,5 +15,23 @@ en:
   'USER_SHOW_ROLE': 'role'
 
   # CONSUMERS
+  'CONSUMER_INDEX_TITLE': 'consumers'
   'CONSUMER_INDEX_FIRST_NAME': 'first name'
   'CONSUMER_INDEX_LAST_NAME': 'last name'
+  'CONSUMER_INDEX_ADD_USER_LINK': 'Add user'
+
+  'CONSUMER_NEW_TITLE': 'add consumer'
+  'CONSUMER_NEW': 'Create'
+  'CONSUMER_NEW_BACK': 'Back'
+
+  # PLACEHOLDERS
+  'FIRST_NAME_PLACEHOLDER': 'First name'
+  'LAST_NAME_PLACEHOLDER': 'Last name'
+
+  # ERRORS
+  'ERROR_FIRST_NAME_REQUIRED': 'First name is required'
+  'ERROR_FIRST_NAME_SHORT': 'First name is too short (min 3 char.)'
+  'ERROR_FIRST_NAME_LONG': 'First name is too long (max 30 char.)'
+  'ERROR_LAST_NAME_REQUIRED': 'Last name is required'
+  'ERROR_LAST_NAME_SHORT': 'Last name is too short (min 3 char.)'
+  'ERROR_LAST_NAME_LONG': 'Last name is too long (max 30 char.)'

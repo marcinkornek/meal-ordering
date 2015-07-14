@@ -1,0 +1,34 @@
+.consumers__title
+  ' {{ "CONSUMER_NEW_TITLE" | translate }}
+
+form(style='width:50%;margin-left:auto;margin-right:auto' name='createConsumerForm')
+  .form-field
+    input.form-control.span12(type="text" maxlength="30" name="first_name" placeholder="{{ 'FIRST_NAME_PLACEHOLDER' | translate }}" ng-model="formData.first_name" required ng-minlength='3' ng-maxlength='30')
+
+      .form-field__errors ng-show="createConsumerForm.first_name.$touched && createConsumerForm.first_name.$dirty"
+        .form-field__error ng-show="createConsumerForm.first_name.$error.required"
+          ' {{ "ERROR_FIRST_NAME_REQUIRED" | translate }}
+        .form-field__error ng-show="createConsumerForm.first_name.$error.minlength"
+          ' {{ "ERROR_FIRST_NAME_SHORT" | translate }}
+        .form-field__error ng-show="createConsumerForm.first_name.$error.maxlength"
+          ' {{ "ERROR_FIRST_NAME_LONG" | translate }}
+
+  .form-field
+    input.form-control.span12(type="text" maxlength="30" name="last_name" placeholder="{{ 'LAST_NAME_PLACEHOLDER' | translate }}" ng-model="formData.last_name" required ng-minlength='3' ng-maxlength='30')
+
+      .form-field__errors ng-show="createConsumerForm.last_name.$touched && createConsumerForm.last_name.$dirty"
+        .form-field__error ng-show="createConsumerForm.last_name.$error.required"
+          ' {{ "ERROR_LAST_NAME_REQUIRED" | translate }}
+        .form-field__error ng-show="createConsumerForm.last_name.$error.minlength"
+          ' {{ "ERROR_LAST_NAME_SHORT" | translate }}
+        .form-field__error ng-show="createConsumerForm.last_name.$error.maxlength"
+          ' {{ "ERROR_LAST_NAME_LONG" | translate }}
+
+  .navigation-buttons
+    .navigation-buttons--left
+      button.btn.btn-default ui-sref='consumers_index'
+        ' {{ "CONSUMER_NEW_BACK" | translate }}
+
+    .navigation-buttons--right
+      button.btn.btn-primary ng-click="createConsumer()"
+        ' {{ "CONSUMER_NEW" | translate }}

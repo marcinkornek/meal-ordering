@@ -3,9 +3,14 @@ nav.navbar.navbar-default
     .navbar-header
       button.navbar-toggle.collapsed aria-expanded="false" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"
         span.sr-only Toggle navigation
-      a.navbar-brand ui-sref="home" Meal Order
+      a.navbar-brand ui-sref="home"
+        ' {{ "HEADER_APP_NAME" | translate }}
 
     ul.nav.navbar-nav.navbar-right
+      li
+        a ui-sref='consumers_index'
+          ' {{ "HEADER_CONSUMERS_LINK" | translate }}
+
       li dropdown="" is-open="status.isopen1"
         a.dropdown-toggle dropdown-toggle="" ng-disabled="disabled" type="button"
           .header__language
@@ -28,8 +33,8 @@ nav.navbar.navbar-default
         ul.dropdown-menu role="menu"
           li
             a ui-sref="users_show"
-              | Account
+              ' {{ "HEADER_ACCOUNT_LINK" | translate }}
           li.divider
           li
             a ng-click="destroySession()"
-              | Logout
+              ' {{ "HEADER_LOGOUT_LINK" | translate }}

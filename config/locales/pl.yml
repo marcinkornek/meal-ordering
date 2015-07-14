@@ -1,4 +1,9 @@
 pl:
+  # HEADER
+  'HEADER_APP_NAME': 'Zamawianie posiłków'
+  'HEADER_ACCOUNT_LINK': 'Konto'
+  'HEADER_LOGOUT_LINK': 'Wyloguj się'
+  'HEADER_CONSUMERS_LINK': 'Użytkownicy'
 
   # SESSION
   'SESSION_NEW_SIGN_IN_TITLE': 'Zaloguj się'
@@ -10,5 +15,23 @@ pl:
   'USER_SHOW_ROLE': 'rola'
 
   # CONSUMERS
+  'CONSUMER_INDEX_TITLE': 'użytkownicy'
   'CONSUMER_INDEX_FIRST_NAME': 'imię'
   'CONSUMER_INDEX_LAST_NAME': 'nazwisko'
+  'CONSUMER_INDEX_ADD_USER_LINK': "Dodaj użytkownika"
+
+  'CONSUMER_NEW_TITLE': 'dodaj użytkownika'
+  'CONSUMER_NEW': 'Dodaj'
+  'CONSUMER_NEW_BACK': 'Wstecz'
+
+  # PLACEHOLDERS
+  'FIRST_NAME_PLACEHOLDER': 'Imię'
+  'LAST_NAME_PLACEHOLDER': 'Nazwisko'
+
+  # ERRORS
+  'ERROR_FIRST_NAME_REQUIRED': 'Imię jest wymagane'
+  'ERROR_FIRST_NAME_SHORT': 'Imię jest zbyt krótkie (min 3 znaki)'
+  'ERROR_FIRST_NAME_LONG': 'Imię jest zbyt długie (max 30 znaków)'
+  'ERROR_LAST_NAME_REQUIRED': 'Nazwisko jest wymagane'
+  'ERROR_LAST_NAME_SHORT': 'Nazwisko jest zbyt krótkie (min 3 znaki)'
+  'ERROR_LAST_NAME_LONG': 'Nazwisko jest zbyt długie (max 30 znaków)'
