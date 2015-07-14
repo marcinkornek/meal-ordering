@@ -6,3 +6,6 @@
 #= require_tree ./
 
 jasmine.getFixtures().fixturesPath = 'fixtures'
+
+shared = angular.module('MealOrdering')
+shared.constant('Rails', { env: 'dev' })
