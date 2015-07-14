@@ -1,9 +1,12 @@
 .orders__title
   ' {{ "ORDER_INDEX_TITLE" | translate }}
 
-button.btn.btn-success ui-sref='orders_new'
-  i.fa.fa-plus
-  '  {{ "ORDER_INDEX_ADD_ORDER_LINK" | translate }}
+div ng-show='data.remainingConsumersCount > 0'
+  button.btn.btn-success ui-sref='orders_new'
+    i.fa.fa-plus
+    '  {{ "ORDER_INDEX_ADD_ORDER_LINK" | translate }}
+  '  {{ "ORDER_INDEX_REMAINING_CONSUMERS" | translate }}:
+  '  {{ data.remainingConsumersCount }}
 
 .orders
   .order ng-repeat="order in data.orders"

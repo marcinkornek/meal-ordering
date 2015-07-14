@@ -40,6 +40,7 @@ en:
   'ORDER_INDEX_PRODUCT_NAME': 'Product name'
   'ORDER_INDEX_PRICE': 'Price'
   'ORDER_INDEX_CONSUMER_NAME': 'Consumer'
+  'ORDER_INDEX_REMAINING_CONSUMERS': 'Remaining consumers'
   'ORDER_INDEX_DELETE_LINK': 'Delete'
   'ORDER_INDEX_EDIT_LINK': 'Edit'
 

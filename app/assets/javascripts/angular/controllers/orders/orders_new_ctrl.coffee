@@ -20,7 +20,7 @@ OrdersNewCtrl = ($scope, $state, ordersData, consumersData, $http) ->
   # function
 
   $scope.createOrder = ->
-    $scope.formData.consumer_id = $scope.formData.consumer.id
+    $scope.formData.consumer_id = $scope.formData.consumer.id if $scope.formData.consumer
     if $scope.isFormValid()
       ordersData.save({}, $scope.formData
       , (success) ->

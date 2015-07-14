@@ -19,6 +19,10 @@ class User < ActiveRecord::Base
     end
   end
 
+  def orders
+    Order.where('consumer_id IN (?)', consumers.pluck(:id))
+  end
+
   private
 
   def self.create_user_with_aouth(params)
