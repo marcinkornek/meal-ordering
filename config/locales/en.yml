@@ -48,6 +48,9 @@ en:
   'ORDER_NEW_BACK': 'Back'
   'ORDER_NEW': 'Create'
 
+  'ORDER_EDIT_TITLE': 'edit order'
+  'ORDER_EDIT': 'Update'
+
   # PLACEHOLDERS
   'FIRST_NAME_PLACEHOLDER': 'First name'
   'LAST_NAME_PLACEHOLDER': 'Last name'

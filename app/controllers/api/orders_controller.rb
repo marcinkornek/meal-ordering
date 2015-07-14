@@ -9,9 +9,21 @@ class Api::OrdersController < ApplicationController
     }
   end
 
+  def show
+    render json: order.extend(OrderRepresenter)
+  end
+
   def create
     order = Order.new(order_params)
     if order.save
+      render json: order.extend(OrderRepresenter)
+    else
+      render json: order.errors, status: :not_acceptable
+    end
+  end
+
+  def update
+    if order.update_attributes(order_params)
       render json: order.extend(OrderRepresenter)
     else
       render json: order.errors, status: :not_acceptable

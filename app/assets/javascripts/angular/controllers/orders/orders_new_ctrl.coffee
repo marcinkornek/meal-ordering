@@ -34,14 +34,5 @@ OrdersNewCtrl = ($scope, $state, ordersData, consumersData, $http) ->
   $scope.isFormValid = ->
     $scope.formData.product_name && $scope.formData.price && $scope.formData.consumer_id
 
-  $scope.country = {}
-  $scope.countries = [
-    name: "Afghanistan"
-    code: "AF"
-  ,
-    name: "Åland Islands"
-    code: "AX"
-  ]
-
 angular.module('MealOrdering').controller 'OrdersNewCtrl', OrdersNewCtrl
 OrdersNewCtrl.$inject = ['$scope', '$state', 'ordersData', 'consumersData', '$http']

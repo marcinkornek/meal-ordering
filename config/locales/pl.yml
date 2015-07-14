@@ -48,6 +48,9 @@ pl:
   'ORDER_NEW_BACK': 'Wstecz'
   'ORDER_NEW': 'Dodaj'
 
+  'ORDER_EDIT_TITLE': 'edytuj zamówienie'
+  'ORDER_EDIT': 'Aktualizuj'
+
   # PLACEHOLDERS
   'FIRST_NAME_PLACEHOLDER': 'Imię'
   'LAST_NAME_PLACEHOLDER': 'Nazwisko'
