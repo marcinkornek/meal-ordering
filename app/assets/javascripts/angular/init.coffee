@@ -43,6 +43,7 @@ angular.module('MealOrdering', [
     # Angular translate
     $translateProvider.useLoader('railsLocalesLoader')
     $translateProvider.preferredLanguage('pl')
+    $translateProvider.useSanitizeValueStrategy('escaped')
 
 # ###
 # http://stackoverflow.com/a/22540482/3922041
