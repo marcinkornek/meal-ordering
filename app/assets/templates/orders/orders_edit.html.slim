@@ -29,10 +29,10 @@ form(style='width:50%;margin-left:auto;margin-right:auto' name='createOrderForm'
           ' {{ "ERROR_PRICE_PATTERN" | translate }}
 
   .navigation-buttons
+    .navigation-buttons--right
+      button.btn.btn-primary type='submit' ng-click="updateOrder(order.id)"
+        ' {{ "ORDER_EDIT" | translate }}
+
     .navigation-buttons--left
       button.btn.btn-default ui-sref='orders_index'
         ' {{ "ORDER_NEW_BACK" | translate }}
-
-    .navigation-buttons--right
-      button.btn.btn-primary ng-click="updateOrder(order.id)"
-        ' {{ "ORDER_EDIT" | translate }}

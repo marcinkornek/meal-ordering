@@ -25,10 +25,10 @@ form(style='width:50%;margin-left:auto;margin-right:auto' name='createConsumerFo
           ' {{ "ERROR_LAST_NAME_LONG" | translate }}
 
   .navigation-buttons
+    .navigation-buttons--right
+      button.btn.btn-primary type='submit' ng-click="createConsumer()"
+        ' {{ "CONSUMER_NEW" | translate }}
+
     .navigation-buttons--left
       button.btn.btn-default ui-sref='consumers_index'
         ' {{ "CONSUMER_NEW_BACK" | translate }}
-
-    .navigation-buttons--right
-      button.btn.btn-primary ng-click="createConsumer()"
-        ' {{ "CONSUMER_NEW" | translate }}
