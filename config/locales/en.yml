@@ -46,6 +46,9 @@ en:
   'ORDER_INDEX_DELETE_LINK': 'Delete'
   'ORDER_INDEX_EDIT_LINK': 'Edit'
   'ORDER_INDEX_CHANGE_DELIVERED' : 'Change state to delivered'
+  'ORDER_INDEX_FILTER_ALL': 'All orders'
+  'ORDER_INDEX_FILTER_NOT_DELIVERED': 'Not delivered orders'
+  'ORDER_INDEX_FILTER_DELIVERED': 'Delivered orders'
 
   'ORDER_NEW_TITLE': 'new order'
   'ORDER_NEW_BACK': 'Back'

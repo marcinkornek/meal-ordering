@@ -46,6 +46,9 @@ pl:
   'ORDER_INDEX_DELETE_LINK': 'Usuń'
   'ORDER_INDEX_EDIT_LINK': 'Edytuj'
   'ORDER_INDEX_CHANGE_DELIVERED' : 'Zmień status na dostarczony'
+  'ORDER_INDEX_FILTER_ALL': 'Wszystkie zamówienia'
+  'ORDER_INDEX_FILTER_NOT_DELIVERED': 'Niedostarczone zamówienia'
+  'ORDER_INDEX_FILTER_DELIVERED': 'Dostarczone zamówienia'
 
   'ORDER_NEW_TITLE': 'nowe zamówienie'
   'ORDER_NEW_BACK': 'Wstecz'

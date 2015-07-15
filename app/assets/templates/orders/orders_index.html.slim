@@ -8,6 +8,9 @@ div ng-show='data.remainingConsumersCount > 0'
   '  {{ "ORDER_INDEX_REMAINING_CONSUMERS" | translate }}:
   '  {{ data.remainingConsumersCount }}
 
+.orders__filter ng-show="data.allOrders.length > 0"
+  select.form-control ng-init="data.filter.id = 1" ng-model="data.filter.id" ng-options="item.id as item.name | translate for item in filters" ng-change="filterOrders(data.filter.id)"
+
 .orders
   .order ng-repeat="order in data.orders"
     .panel.panel-default style="margin-bottom: 5px"
@@ -37,6 +40,6 @@ div ng-show='data.remainingConsumersCount > 0'
           a ui-sref="orders_edit({ orderId: order.id })"
             ' {{ "ORDER_INDEX_EDIT_LINK" | translate }}
 
-          div
+          div ng-show="order.state == 'ordered'"
             button.btn.bto-default ng-click='changeState(order.id)'
               ' {{ "ORDER_INDEX_CHANGE_DELIVERED" | translate }}
