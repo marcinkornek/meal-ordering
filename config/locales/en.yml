@@ -28,6 +28,7 @@ en:
   'CONSUMER_INDEX_EDIT_LINK': "Edit"
   'CONSUMER_INDEX_ORDER_ORDERED': 'Ordered?'
   'CONSUMER_INDEX_ORDER_DELIVERED': 'Delivered?'
+  'CONSUMER_INDEX_ORDER_BUTTON': "Add order"
 
   'CONSUMER_NEW_TITLE': 'add consumer'
   'CONSUMER_NEW': 'Create'

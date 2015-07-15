@@ -28,6 +28,7 @@ pl:
   'CONSUMER_INDEX_EDIT_LINK': "Edytuj"
   'CONSUMER_INDEX_ORDER_ORDERED': 'Zamówiono?'
   'CONSUMER_INDEX_ORDER_DELIVERED': 'Dostarczono?'
+  'CONSUMER_INDEX_ORDER_BUTTON': "Dodaj zamówienie"
 
   'CONSUMER_NEW_TITLE': 'dodaj użytkownika'
   'CONSUMER_NEW': 'Dodaj'

@@ -1,4 +1,4 @@
-ConsumersIndexCtrl = ($scope, $state, consumersData, ngDialog) ->
+ConsumersIndexCtrl = ($scope, $state, consumersData, ngDialog, orderService) ->
 
   # loading data
 
@@ -36,5 +36,9 @@ ConsumersIndexCtrl = ($scope, $state, consumersData, ngDialog) ->
       el.id is consumerId
     )
 
+  $scope.addUserOrder = (customer) ->
+    # $scope.data.customer = orderService
+    orderService.setCustomerScope(customer)
+
 angular.module('MealOrdering').controller 'ConsumersIndexCtrl', ConsumersIndexCtrl
-ConsumersIndexCtrl.$inject = ['$scope', '$state', 'consumersData', 'ngDialog']
+ConsumersIndexCtrl.$inject = ['$scope', '$state', 'consumersData', 'ngDialog', 'orderService']

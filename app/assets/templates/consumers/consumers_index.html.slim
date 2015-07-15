@@ -44,3 +44,7 @@ button.btn.btn-success ui-sref='consumers_new'
                 i.fa.fa-check-circle
               .consumer__order-status--not-completed ng-show="consumer.order.state == 'ordered'"
                 i.fa.fa-times-circle
+
+          div ng-hide='consumer.order'
+            button.btn.bto-default ng-click='addUserOrder(consumer)' ui-sref='orders_new'
+              ' {{ "CONSUMER_INDEX_ORDER_BUTTON" | translate }}
