@@ -48,3 +48,6 @@ button.btn.btn-success ui-sref='consumers_new'
           div ng-hide='consumer.order'
             button.btn.bto-default ng-click='addUserOrder(consumer)' ui-sref='orders_new'
               ' {{ "CONSUMER_INDEX_ORDER_BUTTON" | translate }}
+
+  .consumer ng-hide="data.consumers.length > 0"
+    ' {{ "CONSUMER_INDEX_NO_CONSUMERS" | translate }}

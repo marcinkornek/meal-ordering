@@ -11,6 +11,7 @@ OrdersIndexCtrl = ($scope, $state, ordersData, ngDialog, $cookies) ->
     , (orders) ->
       $scope.data.allOrders = $scope.data.orders = orders.orders
       $scope.data.remainingConsumersCount = orders.remaining_consumers_count
+      $scope.data.consumersCount = orders.consumers_count
       $scope.filterOrders($scope.filterId)
     , (error) ->
       console.log 'error'

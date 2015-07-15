@@ -29,6 +29,7 @@ en:
   'CONSUMER_INDEX_ORDER_ORDERED': 'Ordered?'
   'CONSUMER_INDEX_ORDER_DELIVERED': 'Delivered?'
   'CONSUMER_INDEX_ORDER_BUTTON': "Add order"
+  'CONSUMER_INDEX_NO_CONSUMERS': 'No consumers'
 
   'CONSUMER_NEW_TITLE': 'add consumer'
   'CONSUMER_NEW': 'Create'
@@ -50,6 +51,8 @@ en:
   'ORDER_INDEX_FILTER_ALL': 'All orders'
   'ORDER_INDEX_FILTER_NOT_DELIVERED': 'Not delivered orders'
   'ORDER_INDEX_FILTER_DELIVERED': 'Delivered orders'
+  'ORDER_INDEX_NO_ORDERS': 'No orders with the given criteria, total orders'
+  'ORDER_INDEX_NO_CONSUMERS': 'You have to add consumer to create order'
 
   'ORDER_NEW_TITLE': 'new order'
   'ORDER_NEW_BACK': 'Back'

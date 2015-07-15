@@ -43,3 +43,14 @@ div ng-show='data.remainingConsumersCount > 0'
           div ng-show="order.state == 'ordered'"
             button.btn.bto-default ng-click='changeState(order.id)'
               ' {{ "ORDER_INDEX_CHANGE_DELIVERED" | translate }}
+
+  .order ng-hide="data.orders.length > 0"
+    ' {{ "ORDER_INDEX_NO_ORDERS" | translate }}:
+    ' {{ data.allOrders.length }}
+
+  .order ng-show="data.orders.length == 0 && data.consumersCount == 0"
+    div
+      ' {{ "ORDER_INDEX_NO_CONSUMERS" | translate }}
+    button.btn.btn-success ui-sref='consumers_new'
+      i.fa.fa-plus
+      '  {{ "CONSUMER_INDEX_ADD_USER_LINK" | translate }}
