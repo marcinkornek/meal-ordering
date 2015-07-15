@@ -1,6 +1,9 @@
-OrdersIndexCtrl = ($scope, $state, ordersData, ngDialog) ->
+OrdersIndexCtrl = ($scope, $state, ordersData, ngDialog, $cookies) ->
 
   # loading data
+
+  $scope.loadFilterIdFromCookie = ->
+    $scope.filterId = parseInt($cookies.get('filterId'), 10) || 1
 
   $scope.loadOrders = ->
     $scope.data = {}
@@ -8,6 +11,7 @@ OrdersIndexCtrl = ($scope, $state, ordersData, ngDialog) ->
     , (orders) ->
       $scope.data.allOrders = $scope.data.orders = orders.orders
       $scope.data.remainingConsumersCount = orders.remaining_consumers_count
+      $scope.filterOrders($scope.filterId)
     , (error) ->
       console.log 'error'
       console.log error.status
@@ -15,6 +19,7 @@ OrdersIndexCtrl = ($scope, $state, ordersData, ngDialog) ->
     )
 
   $scope.loadOrders()
+  $scope.loadFilterIdFromCookie()
 
   # functions
 
@@ -24,8 +29,9 @@ OrdersIndexCtrl = ($scope, $state, ordersData, ngDialog) ->
     { id: 3, name: 'ORDER_INDEX_FILTER_DELIVERED' }
   ]
 
-  $scope.filterOrders = (filterById) ->
-    switch filterById
+  $scope.filterOrders = (filterId) ->
+    $scope.saveFilterIdToCookie(filterId)
+    switch filterId
       when 1
         $scope.data.orders = $scope.data.allOrders
       when 2
@@ -33,8 +39,11 @@ OrdersIndexCtrl = ($scope, $state, ordersData, ngDialog) ->
       when 3
         $scope.filterOrdersBy('delivered')
 
-  $scope.filterOrdersBy = (filterBy) =>
-    $scope.data.orders = _.where($scope.data.allOrders, {state: filterBy})
+  $scope.filterOrdersBy = (filter) =>
+    $scope.data.orders = _.where($scope.data.allOrders, {state: filter})
+
+  $scope.saveFilterIdToCookie = (filterId) ->
+    $cookies.put('filterId', filterId)
 
   $scope.modalDeleteConfirmation = (id) ->
     dialog = ngDialog.open
@@ -74,4 +83,4 @@ OrdersIndexCtrl = ($scope, $state, ordersData, ngDialog) ->
     item.state = order.state
 
 angular.module('MealOrdering').controller 'OrdersIndexCtrl', OrdersIndexCtrl
-OrdersIndexCtrl.$inject = ['$scope', '$state', 'ordersData', 'ngDialog']
+OrdersIndexCtrl.$inject = ['$scope', '$state', 'ordersData', 'ngDialog', '$cookies']

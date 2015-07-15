@@ -9,7 +9,7 @@ div ng-show='data.remainingConsumersCount > 0'
   '  {{ data.remainingConsumersCount }}
 
 .orders__filter ng-show="data.allOrders.length > 0"
-  select.form-control ng-init="data.filter.id = 1" ng-model="data.filter.id" ng-options="item.id as item.name | translate for item in filters" ng-change="filterOrders(data.filter.id)"
+  select.form-control ng-init="data.filter.id = filterId" ng-model="data.filter.id" ng-options="item.id as item.name | translate for item in filters" ng-change="filterOrders(data.filter.id)"
 
 .orders
   .order ng-repeat="order in data.orders"
