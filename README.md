@@ -15,6 +15,7 @@ $ bundle install
 Create a renamed copy of the application.yml.sample file in config folder.
 ```
 $ cp config/application.yml.sample config/application.yml
+```
 
 
 ### Step 3: Add your Facebook environment variables
