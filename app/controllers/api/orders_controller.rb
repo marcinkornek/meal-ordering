@@ -4,7 +4,7 @@ class Api::OrdersController < ApplicationController
   def index
     remaining_consumers_count = Consumer.remaining_consumers(current_user.consumers).count
     render json: {
-      orders: current_user.orders.extend(OrdersRepresenter).to_hash,
+      orders: current_user.orders.includes(:consumer).extend(OrdersRepresenter).to_hash,
       remaining_consumers_count: remaining_consumers_count,
       consumers_count: current_user.consumers.count
     }

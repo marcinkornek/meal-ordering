@@ -3,7 +3,7 @@ class Api::ConsumersController < ApplicationController
 
   def index
     consumers = current_user.consumers
-    render json: consumers.extend(ConsumersRepresenter)
+    render json: consumers.includes(:order).extend(ConsumersRepresenter)
   end
 
   def show

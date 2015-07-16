@@ -20,6 +20,7 @@ gem 'ngannotate-rails'
 gem 'autoprefixer-rails'
 gem 'figaro'
 gem 'roar-rails'
+gem 'bullet'
 
 # assets
 source 'https://rails-assets.org' do
