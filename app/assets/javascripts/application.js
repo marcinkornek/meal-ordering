@@ -12,6 +12,8 @@
 //= require ngDialog
 //= require angular-ui-select
 //= require select
+//= require moment
+//= require angular-moment
 //
 //= require ./angular/init
 //= require ./angular/routes

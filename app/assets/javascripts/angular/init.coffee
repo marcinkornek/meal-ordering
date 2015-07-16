@@ -8,6 +8,7 @@ angular.module('MealOrdering', [
   'ngDialog',
   'ui.select',
   'ngSanitize',
+  'angularMoment',
 ])
   .factory 'railsLocalesLoader', ($http) ->
     (options) ->
@@ -44,6 +45,11 @@ angular.module('MealOrdering', [
     $translateProvider.useLoader('railsLocalesLoader')
     $translateProvider.preferredLanguage('pl')
     $translateProvider.useSanitizeValueStrategy('escaped')
+
+  .constant('angularMomentConfig', {
+    preprocess: 'utc',
+    timezone: 'Europe/Berlin'
+  })
 
 # ###
 # http://stackoverflow.com/a/22540482/3922041

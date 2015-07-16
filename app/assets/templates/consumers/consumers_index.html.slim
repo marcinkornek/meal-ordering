@@ -24,6 +24,10 @@ button.btn.btn-success ui-sref='consumers_new'
               ' {{ "CONSUMER_INDEX_PRICE" | translate }}:
               ' {{ consumer.order.price }}
               ' {{ "CURRENCY_ZL" | translate }}
+            .consumer__timestamp
+              ' {{ "CONSUMER_INDEX_CREATED_AT" | translate }}:
+              span am-time-ago="consumer.created_at"
+
         .consumer__content--right
           ' {{ "CONSUMER_INDEX_ORDER_ORDERED" | translate }}
           .consumer__order-status

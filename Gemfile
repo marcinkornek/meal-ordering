@@ -41,6 +41,8 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-angular-mocks'
   gem 'rails-assets-ngDialog'
   gem 'rails-assets-angular-ui-select'
+  gem 'rails-assets-moment'
+  gem 'rails-assets-angular-moment'
 end
 
 group :development, :test do

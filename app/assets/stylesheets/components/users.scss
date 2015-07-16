@@ -1,0 +1,17 @@
+.user__content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.user__content--left {
+  flex: 1;
+}
+
+.user__field-link {
+  cursor: pointer;
+}
+
+.user__field-timestamp {
+  color: $gray;
+}

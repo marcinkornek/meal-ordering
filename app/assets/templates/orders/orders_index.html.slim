@@ -26,6 +26,9 @@ div ng-show='data.remainingConsumersCount > 0'
           .order__consumer
             ' {{ "ORDER_INDEX_CONSUMER_NAME" | translate }}:
             ' {{ order.consumer_name }}
+          .order__timestamp
+            ' {{ "ORDER_INDEX_CREATED_AT" | translate }}:
+            span am-time-ago="order.created_at"
 
         .order__content--right
           ' {{ "CONSUMER_INDEX_ORDER_DELIVERED" | translate }}

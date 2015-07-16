@@ -16,6 +16,9 @@ pl:
   'USER_SHOW_EMAIL': 'email'
   'USER_SHOW_NAME': 'imię'
   'USER_SHOW_ROLE': 'rola'
+  'USERS_SHOW_TITLE': 'konto'
+  'USER_SHOW_CONSUMERS_COUNT': 'Użytkowników'
+  'USER_SHOW_CREATED_AT': 'Konto utworzone'
 
   # CONSUMERS
   'CONSUMER_INDEX_TITLE': 'użytkownicy'
@@ -30,6 +33,7 @@ pl:
   'CONSUMER_INDEX_ORDER_DELIVERED': 'Dostarczono?'
   'CONSUMER_INDEX_ORDER_BUTTON': "Dodaj zamówienie"
   'CONSUMER_INDEX_NO_CONSUMERS': 'Brak użytkowników'
+  'CONSUMER_INDEX_CREATED_AT': 'Utworzono'
 
   'CONSUMER_NEW_TITLE': 'dodaj użytkownika'
   'CONSUMER_NEW': 'Dodaj'
@@ -53,6 +57,7 @@ pl:
   'ORDER_INDEX_FILTER_DELIVERED': 'Dostarczone zamówienia'
   'ORDER_INDEX_NO_ORDERS': 'Brak zamówień o podanym kryterium, łączna liczba zamówień'
   'ORDER_INDEX_NO_CONSUMERS': 'Musisz dodać użytkownika, żeby stworzyć zamówienie'
+  'ORDER_INDEX_CREATED_AT': 'Utworzono'
 
   'ORDER_NEW_TITLE': 'nowe zamówienie'
   'ORDER_NEW_BACK': 'Wstecz'

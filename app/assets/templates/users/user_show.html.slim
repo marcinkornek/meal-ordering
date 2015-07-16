@@ -1,10 +1,23 @@
+.consumers__title
+  ' {{ "USERS_SHOW_TITLE" | translate }}
+
 .user
-  .user__field
-    ' {{ "USER_SHOW_EMAIL" | translate }}:
-    ' {{ data.user.email }}
-  .user__field
-    ' {{ "USER_SHOW_NAME" | translate }}:
-    ' {{ data.user.first_name }} {{ data.user.last_name }}
-  .user__field
-    ' {{ "USER_SHOW_ROLE" | translate }}:
-    ' {{ data.user.role }}
+  .panel.panel-default style="margin-bottom: 5px"
+    .panel-body.user__content
+      .user__content--left
+        .user__field
+          ' {{ "USER_SHOW_EMAIL" | translate }}:
+          ' {{ data.user.email }}
+        .user__field
+          ' {{ "USER_SHOW_NAME" | translate }}:
+          ' {{ data.user.full_name }}
+        .user__field
+          ' {{ "USER_SHOW_ROLE" | translate }}:
+          ' {{ data.user.role }}
+      .user__content--right
+        .user__field-link ui-sref='consumers_index'
+          ' {{ "USER_SHOW_CONSUMERS_COUNT" | translate }}:
+          ' {{ data.user.consumers_count }}
+        .user__field-timestamp
+          ' {{ "USER_SHOW_CREATED_AT" | translate }}:
+          span am-time-ago="data.user.created_at"

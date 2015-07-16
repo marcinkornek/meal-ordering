@@ -7,8 +7,9 @@
   display: table;
   margin: 0 auto;
   padding: 20px;
-  background-color: $gray;
   width: 300px;
+  background-color: $almost-white;
+  border: 1px solid $light-gray;
 }
 
 .login__form-title {
