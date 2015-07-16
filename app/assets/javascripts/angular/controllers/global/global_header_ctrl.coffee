@@ -13,7 +13,7 @@ GlobalHeaderCtrl = ($scope, $state, $translate, $cookies, principal, sessionData
 
   # language
   $scope.setLanguage = ->
-    $scope.data.locale = $cookies.get('locale') || 'pl'
+    $scope.data.locale = $cookies.get('locale') || 'en'
     $translate.use($scope.data.locale)
 
   # $scope.setLanguage()

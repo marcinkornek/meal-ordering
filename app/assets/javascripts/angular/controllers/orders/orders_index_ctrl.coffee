@@ -56,8 +56,8 @@ OrdersIndexCtrl = ($scope, $state, ordersData, ngDialog, $cookies) ->
 
   $scope.destroyOrder = (orderId) ->
     ordersData.delete(id: orderId
-    , (consumer) ->
-      $scope.destroyOrderFromOrders(consumer.id)
+    , (order) ->
+      $scope.destroyOrderFromOrders(order.id)
     )
 
   $scope.changeState = (orderId) ->
@@ -67,7 +67,7 @@ OrdersIndexCtrl = ($scope, $state, ordersData, ngDialog, $cookies) ->
     , (error) ->
       console.log 'error'
       console.log error.status
-      $scope.formData.error = 'There is no such consumer'
+      $scope.formData.error = 'There is no such order'
     )
 
   $scope.destroyOrderFromOrders = (orderId) ->
