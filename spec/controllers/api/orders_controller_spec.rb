@@ -8,7 +8,8 @@ describe Api::OrdersController do
   let(:order_representer) do
     {
       'orders' => [consumer_order.extend(OrderRepresenter).to_hash],
-      'remaining_consumers_count' => 1
+      'remaining_consumers_count' => 1,
+      'consumers_count' => 2
     }.to_json
   end
 

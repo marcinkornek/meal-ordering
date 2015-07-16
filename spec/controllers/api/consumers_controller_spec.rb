@@ -5,10 +5,28 @@ describe Api::ConsumersController do
   let!(:consumer)       { FactoryGirl.create(:consumer, first_name: 'Adam', last_name: 'Aaa', user: user) }
   let!(:other_consumer) { FactoryGirl.create(:consumer, first_name: 'Bartek', last_name: 'Bbb', user: user) }
   let(:consumer_representer) do
-    { 'id' => consumer.id, 'first_name' => consumer.first_name, 'last_name' => consumer.last_name }
+    {
+      'id' => consumer.id,
+      'first_name' => consumer.first_name,
+      'last_name' => consumer.last_name,
+      'created_at' => consumer.created_at
+    }.to_json
   end
-  let(:other_consumer_representer) do
-    { 'id' => other_consumer.id, 'first_name' => other_consumer.first_name, 'last_name' => other_consumer.last_name }
+  let(:consumers_representer) do
+    [
+      {
+        'id' => consumer.id,
+        'first_name' => consumer.first_name,
+        'last_name' => consumer.last_name,
+        'created_at' => consumer.created_at
+      },
+      {
+      'id' => other_consumer.id,
+      'first_name' => other_consumer.first_name,
+      'last_name' => other_consumer.last_name,
+      'created_at' => other_consumer.created_at
+      }
+    ].to_json
   end
 
   context 'user is logged in' do
@@ -20,14 +38,14 @@ describe Api::ConsumersController do
     describe 'GET index' do
       it 'returns JSON with all consumers' do
         get :index
-        expect(JSON.parse(response.body)).to eq([consumer_representer, other_consumer_representer])
+        expect(response.body).to eq(consumers_representer)
       end
     end
 
     describe 'GET show' do
       it 'returns JSON with consumer' do
         get :show, {id: consumer.id}
-        expect(JSON.parse(response.body)).to eq(consumer_representer)
+        expect(response.body).to eq(consumer_representer)
       end
     end
 
