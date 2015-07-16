@@ -34,6 +34,8 @@ pl:
   'CONSUMER_INDEX_ORDER_BUTTON': "Dodaj zamówienie"
   'CONSUMER_INDEX_NO_CONSUMERS': 'Brak użytkowników'
   'CONSUMER_INDEX_CREATED_AT': 'Utworzono'
+  'CONSUMER_INDEX_ORDER': 'Zamówienie'
+  'CONSUMER_INDEX_CONSUMER_TITLE': 'użytkownik'
 
   'CONSUMER_NEW_TITLE': 'dodaj użytkownika'
   'CONSUMER_NEW': 'Dodaj'
@@ -58,6 +60,10 @@ pl:
   'ORDER_INDEX_NO_ORDERS': 'Brak zamówień o podanym kryterium, łączna liczba zamówień'
   'ORDER_INDEX_NO_CONSUMERS': 'Musisz dodać użytkownika, żeby stworzyć zamówienie'
   'ORDER_INDEX_CREATED_AT': 'Utworzono'
+  'ORDER_INDEX_CONSUMER_TITLE': 'użytkownik'
+  'ORDER_INDEX_CONSUMER_FIRST_NAME': 'Imię'
+  'ORDER_INDEX_CONSUMER_LAST_NAME': 'Nazwisko'
+  'ORDER_INDEX_ORDER_TITLE': 'zamówienie'
 
   'ORDER_NEW_TITLE': 'nowe zamówienie'
   'ORDER_NEW_BACK': 'Wstecz'

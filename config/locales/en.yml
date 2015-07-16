@@ -34,6 +34,8 @@ en:
   'CONSUMER_INDEX_ORDER_BUTTON': "Add order"
   'CONSUMER_INDEX_NO_CONSUMERS': 'No consumers'
   'CONSUMER_INDEX_CREATED_AT': 'Created at'
+  'CONSUMER_INDEX_ORDER': 'Order'
+  'CONSUMER_INDEX_CONSUMER_TITLE': 'consumer'
 
   'CONSUMER_NEW_TITLE': 'add consumer'
   'CONSUMER_NEW': 'Create'
@@ -58,6 +60,10 @@ en:
   'ORDER_INDEX_NO_ORDERS': 'No orders with the given criteria, total orders'
   'ORDER_INDEX_NO_CONSUMERS': 'You have to add consumer to create order'
   'ORDER_INDEX_CREATED_AT': 'Created at'
+  'ORDER_INDEX_CONSUMER_TITLE': 'consumer'
+  'ORDER_INDEX_CONSUMER_FIRST_NAME': 'First name'
+  'ORDER_INDEX_CONSUMER_LAST_NAME': 'Last name'
+  'ORDER_INDEX_ORDER_TITLE': 'order'
 
   'ORDER_NEW_TITLE': 'new order'
   'ORDER_NEW_BACK': 'Back'

@@ -10,12 +10,26 @@ button.btn.btn-success ui-sref='consumers_new'
     .panel.panel-default style="margin-bottom: 5px"
       .panel-body.consumer__content
         .consumer__content--left
+          .consumer__title
+            ' {{ "CONSUMER_INDEX_CONSUMER_TITLE" | translate }}
           .consumer__first-name
             ' {{ "CONSUMER_INDEX_FIRST_NAME" | translate }}:
             ' {{ consumer.first_name }}
           .consumer__last-name
             ' {{ "CONSUMER_INDEX_LAST_NAME" | translate }}:
             ' {{ consumer.last_name }}
+          .consumer__timestamp
+            ' {{ "CONSUMER_INDEX_CREATED_AT" | translate }}:
+            span am-time-ago="consumer.created_at"
+
+        .consumer__content--left
+          .consumer__order-title
+            ' {{ "CONSUMER_INDEX_ORDER" | translate }}
+            .consumer__order-status
+              .consumer__order-status--completed ng-show='consumer.order'
+                i.fa.fa-check-circle
+              .consumer__order-status--not-completed ng-hide='consumer.order'
+                i.fa.fa-times-circle
           .consumer__order ng-show='consumer.order'
             .consumer__order-product_name
               ' {{ "CONSUMER_INDEX_PRODUCT_NAME" | translate }}:
@@ -24,34 +38,22 @@ button.btn.btn-success ui-sref='consumers_new'
               ' {{ "CONSUMER_INDEX_PRICE" | translate }}:
               ' {{ consumer.order.price }}
               ' {{ "CURRENCY_ZL" | translate }}
-            .consumer__timestamp
-              ' {{ "CONSUMER_INDEX_CREATED_AT" | translate }}:
-              span am-time-ago="consumer.created_at"
+            div ng-show='consumer.order'
+              ' {{ "CONSUMER_INDEX_ORDER_DELIVERED" | translate }}
+              .consumer__order-status
+                .consumer__order-status--completed ng-hide="consumer.order.state == 'ordered'"
+                  i.fa.fa-check-circle
+                .consumer__order-status--not-completed ng-show="consumer.order.state == 'ordered'"
+                  i.fa.fa-times-circle
+          div ng-hide='consumer.order'
+            button.btn.bto-default ng-click='addUserOrder(consumer)' ui-sref='orders_new'
+              ' {{ "CONSUMER_INDEX_ORDER_BUTTON" | translate }}
 
         .consumer__content--right
-          ' {{ "CONSUMER_INDEX_ORDER_ORDERED" | translate }}
-          .consumer__order-status
-            .consumer__order-status--completed ng-show='consumer.order'
-              i.fa.fa-check-circle
-            .consumer__order-status--not-completed ng-hide='consumer.order'
-              i.fa.fa-times-circle
-
           a ng-click="modalDeleteConfirmation(consumer.id)"
             ' {{ "CONSUMER_INDEX_DELETE_LINK" | translate }}
           a ui-sref="consumers_edit({ consumerId: consumer.id })"
             ' {{ "CONSUMER_INDEX_EDIT_LINK" | translate }}
-
-          div ng-show='consumer.order'
-            ' {{ "CONSUMER_INDEX_ORDER_DELIVERED" | translate }}
-            .consumer__order-status
-              .consumer__order-status--completed ng-hide="consumer.order.state == 'ordered'"
-                i.fa.fa-check-circle
-              .consumer__order-status--not-completed ng-show="consumer.order.state == 'ordered'"
-                i.fa.fa-times-circle
-
-          div ng-hide='consumer.order'
-            button.btn.bto-default ng-click='addUserOrder(consumer)' ui-sref='orders_new'
-              ' {{ "CONSUMER_INDEX_ORDER_BUTTON" | translate }}
 
   .consumer ng-hide="data.consumers.length > 0"
     ' {{ "CONSUMER_INDEX_NO_CONSUMERS" | translate }}

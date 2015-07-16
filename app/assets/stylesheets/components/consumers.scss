@@ -20,7 +20,7 @@
 
 .consumer__order-status {
   display: inline-block;
-  font-size: 20px;
+  font-size: 14px;
   margin-right: 5px;
 }
 
@@ -30,4 +30,10 @@
 
 .consumer__order-status--not-completed {
   color: $sunset-red;
+}
+
+.consumer__order-title,
+.consumer__title {
+  font-weight: bold;
+  text-transform: uppercase;
 }

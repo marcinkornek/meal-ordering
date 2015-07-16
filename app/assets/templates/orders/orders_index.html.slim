@@ -16,6 +16,8 @@ div ng-show='data.remainingConsumersCount > 0'
     .panel.panel-default style="margin-bottom: 5px"
       .panel-body.order__content
         .order__content--left
+          .order__title
+            ' {{ "ORDER_INDEX_ORDER_TITLE" | translate }}
           .order__product_name
             ' {{ "ORDER_INDEX_PRODUCT_NAME" | translate }}:
             ' {{ order.product_name }}
@@ -23,29 +25,34 @@ div ng-show='data.remainingConsumersCount > 0'
             ' {{ "ORDER_INDEX_PRICE" | translate }}:
             ' {{ order.price }}
             ' {{ "CURRENCY_ZL" | translate }}
-          .order__consumer
-            ' {{ "ORDER_INDEX_CONSUMER_NAME" | translate }}:
-            ' {{ order.consumer_name }}
           .order__timestamp
             ' {{ "ORDER_INDEX_CREATED_AT" | translate }}:
             span am-time-ago="order.created_at"
-
-        .order__content--right
           ' {{ "CONSUMER_INDEX_ORDER_DELIVERED" | translate }}
           .consumer__order-status
             .consumer__order-status--completed ng-hide="order.state == 'ordered'"
               i.fa.fa-check-circle
             .consumer__order-status--not-completed ng-show="order.state == 'ordered'"
               i.fa.fa-times-circle
+          div ng-show="order.state == 'ordered'"
+            button.btn.bto-default.btn-sm ng-click='changeState(order.id)'
+              ' {{ "ORDER_INDEX_CHANGE_DELIVERED" | translate }}
 
+        .order__content--left
+          .order__consumer-title
+            ' {{ "ORDER_INDEX_CONSUMER_TITLE" | translate }}
+          .order__consumer-first_name
+            ' {{ "ORDER_INDEX_CONSUMER_FIRST_NAME" | translate }}:
+            ' {{ order.consumer.first_name }}
+          .order__consumer-last_name
+            ' {{ "ORDER_INDEX_CONSUMER_LAST_NAME" | translate }}:
+            ' {{ order.consumer.last_name }}
+
+        .order__content--right
           a ng-click="modalDeleteConfirmation(order.id)"
             ' {{ "ORDER_INDEX_DELETE_LINK" | translate }}
           a ui-sref="orders_edit({ orderId: order.id })"
             ' {{ "ORDER_INDEX_EDIT_LINK" | translate }}
-
-          div ng-show="order.state == 'ordered'"
-            button.btn.bto-default ng-click='changeState(order.id)'
-              ' {{ "ORDER_INDEX_CHANGE_DELIVERED" | translate }}
 
   .order ng-hide="data.orders.length > 0"
     ' {{ "ORDER_INDEX_NO_ORDERS" | translate }}:
