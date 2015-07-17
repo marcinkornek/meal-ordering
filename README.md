@@ -34,6 +34,11 @@ development:
 $ rake db:setup
 ```
 
+### Step 5: Install npm packages (needed to run karma tests)
+```
+$ npm install
+```
+
 ## Test
 ### To test Rails controllers and models:
 ```
@@ -49,4 +54,14 @@ $ rails s
 * run tests in browser
 ```
 http://localhost:3000/jasmine
+```
+
+* run tests in terminal - single run
+```
+$ rake karma:run
+```
+
+* run tests in terminal - run with file watcher
+```
+$ rake karma:start
 ```

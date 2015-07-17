@@ -1,0 +1,13 @@
+{
+  "name": "bar",
+  "dependencies": {
+    "karma": ">= 0.12.16",
+    "karma-jasmine": ">= 0.2.2",
+    "karma-coffee-preprocessor": ">= 0.2.1",
+    "karma-slim-preprocessor": ">= 0.0.1",
+    "karma-phantomjs-launcher": ">= 0.1.4"
+  },
+  "devDependencies": {
+    "karma-ng-html2js-preprocessor": "^0.1.2"
+  }
+}
