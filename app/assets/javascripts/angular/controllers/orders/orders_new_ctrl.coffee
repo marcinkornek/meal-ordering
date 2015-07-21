@@ -4,6 +4,7 @@ OrdersNewCtrl = ($scope, $state, ordersData, consumersData, $http, $cookies, ord
 
   $scope.formData = {}
   $scope.formData.consumer = orderService.getCustomerScope() unless _.isEmpty(orderService.getCustomerScope())
+  orderService.setCustomerScope(null)
 
   $scope.loadRemainingConsumers = ->
     $scope.data = {}
@@ -26,7 +27,6 @@ OrdersNewCtrl = ($scope, $state, ordersData, consumersData, $http, $cookies, ord
       ordersData.save({}, $scope.formData
       , (success) ->
         $scope.changeFilterIdCookieToAllOrders()
-        $scope.clearCustomerScope()
         $state.go('orders_index')
       , (error) ->
         console.log 'error'
@@ -38,9 +38,6 @@ OrdersNewCtrl = ($scope, $state, ordersData, consumersData, $http, $cookies, ord
 
   $scope.isFormValid = ->
     $scope.formData.product_name && $scope.formData.price && $scope.formData.consumer_id
-
-  $scope.clearCustomerScope = ->
-    orderService.setCustomerScope(null)
 
 angular.module('MealOrdering').controller 'OrdersNewCtrl', OrdersNewCtrl
 OrdersNewCtrl.$inject = ['$scope', '$state', 'ordersData', 'consumersData', '$http', '$cookies', 'orderService']
