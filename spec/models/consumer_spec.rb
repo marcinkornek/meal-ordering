@@ -35,7 +35,7 @@ describe Consumer do
 
   describe '#self.remaining_consumers' do
     it 'returns customers without orders' do
-      expect(Consumer.remaining_consumers(user.consumers)).to eq([other_consumer])
+      expect(Consumer.remaining_consumers).to eq([other_consumer])
     end
   end
 end

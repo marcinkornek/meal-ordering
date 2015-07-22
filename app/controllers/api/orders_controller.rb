@@ -2,7 +2,7 @@ class Api::OrdersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    remaining_consumers_count = Consumer.remaining_consumers(current_user.consumers).count
+    remaining_consumers_count = Consumer.remaining_consumers.count
     render json: {
       orders: current_user.orders.includes(:consumer).extend(OrdersRepresenter).to_hash,
       remaining_consumers_count: remaining_consumers_count,
