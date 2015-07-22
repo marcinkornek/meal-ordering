@@ -1,22 +1,15 @@
 class User < ActiveRecord::Base
   has_many :consumers, dependent: :destroy
 
-  validates :email,      presence: true,
-                         uniqueness: {case_sensitive: false}
+  validates :email,      presence: true, uniqueness: {case_sensitive: false}
   validates :first_name, presence: true
   validates :last_name,  presence: true
   validates :uid,        presence: true
   validates :provider,   presence: true
 
   def self.find_for_oauth(params)
-    user = User.where(provider: params[:provider], uid: params[:id]).first
-    if user
-      p '--------- already registered with oauth -----------'
-      user
-    else
-      p '--------- creating user with oauth -----------'
-      create_user_with_aouth(params)
-    end
+    user = User.find_by(provider: params[:provider], uid: params[:id])
+    user || create_user_with_aouth(params)
   end
 
   def orders
