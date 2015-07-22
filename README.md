@@ -1,7 +1,7 @@
 # Ruby on Rails + AngularJS meal ordering app
 
 ## App on heroku
-[*meal-ordering.herokuapp.com*](meal-ordering.herokuapp.com)
+[*meal-ordering.herokuapp.com*](https://meal-ordering.herokuapp.com)
 
 ## Setup
 Follow these steps to setup the application:
