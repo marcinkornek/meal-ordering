@@ -1,4 +1,4 @@
-LoginCtrl = ($scope, $state, sessionData) ->
+LoginCtrl = ($scope, $state, sessionData, Rails) ->
 
   # facebook SDK
 
@@ -30,7 +30,7 @@ LoginCtrl = ($scope, $state, sessionData) ->
   $scope.data = {}
 
   $scope.redirectToHomeIfLoggedIn = ->
-    if window.currentUser
+    if Rails.currentUser
       $state.go('home')
 
   $scope.redirectToHomeIfLoggedIn()
@@ -49,7 +49,7 @@ LoginCtrl = ($scope, $state, sessionData) ->
     response = _.extend(response, {provider: 'facebook'})
     sessionData.save({}, response
     , (success) ->
-      window.currentUser = success
+      Rails.currentUser = success
       $state.go('home')
     , (error) ->
       console.log 'error'
@@ -65,4 +65,4 @@ LoginCtrl = ($scope, $state, sessionData) ->
         $scope.statusChangeCallback(response)
 
 angular.module('MealOrdering').controller 'LoginCtrl', LoginCtrl
-LoginCtrl.$inject = ['$scope', '$state', 'sessionData']
+LoginCtrl.$inject = ['$scope', '$state', 'sessionData', 'Rails']

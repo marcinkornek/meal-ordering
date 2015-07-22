@@ -2,6 +2,7 @@ describe 'GlobalHeaderCtrl', ->
   $controller = null
   $scope = null
   $cookies = null
+  Rails = null
   $httpBackend = null
 
   beforeEach ->
@@ -9,11 +10,12 @@ describe 'GlobalHeaderCtrl', ->
       $httpBackend = $injector.get('$httpBackend')
       $httpBackend.whenDELETE('/api/session').respond(200, Helper.token, {})
     )
-    inject((_$controller_, _$rootScope_, _$cookies_, _$state_) ->
+    inject((_$controller_, _$rootScope_, _$cookies_, _$state_, _Rails_) ->
       # The injector unwraps the underscores (_) from around the parameter names when matching
       $controller = _$controller_
       $scope = _$rootScope_.$new()
       $cookies = _$cookies_
+      Rails = _Rails_
       $state = _$state_
       spyOn( $state, 'go' )
       spyOn( $state, 'transitionTo' )
@@ -50,10 +52,10 @@ describe 'GlobalHeaderCtrl', ->
         expect($scope.data.user).toEqual(undefined)
 
       it 'clears user data from head', ->
-        window.currentUser = Helper.user
+        Rails.currentUser = Helper.user
         $scope.destroySession()
         $httpBackend.flush()
-        expect(window.currentUser).toEqual(Object {})
+        expect(Rails.currentUser).toEqual(Object {})
 
   Helper =
     token:

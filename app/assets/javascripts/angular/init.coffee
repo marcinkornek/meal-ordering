@@ -55,14 +55,14 @@ angular.module('MealOrdering', [
 # http://stackoverflow.com/a/22540482/3922041
 # ###
 
-angular.module('MealOrdering').run([ "$rootScope", "$state", "$stateParams", "authorization", "principal", ($rootScope, $state, $stateParams, authorization, principal) ->
+angular.module('MealOrdering').run([ "$rootScope", "$state", "$stateParams", "authorization", "principal", "Rails", ($rootScope, $state, $stateParams, authorization, principal, Rails) ->
   $rootScope.$on "$stateChangeStart", (event, toState, toParams, fromState, fromParams) ->
     $rootScope.toState = toState
     $rootScope.toStateParams = toParams
-    if window.currentUser.id
+    if Rails.currentUser.id
       principal.authenticate
-        username: window.currentUser.username
-        roles: [ window.currentUser.role ]
+        username: Rails.currentUser.username
+        roles: [ Rails.currentUser.role ]
     else
       principal.authenticate(null)
     authorization.authorize()

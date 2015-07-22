@@ -8,7 +8,7 @@
 jasmine.getFixtures().fixturesPath = 'fixtures'
 
 shared = angular.module('MealOrdering')
-shared.constant('Rails', { env: 'dev', templates: {} })
+shared.constant('Rails', { env: 'dev', templates: {}, currentUser: {}, facebookId: {} })
 
 beforeEach ->
   module('MealOrdering', ($provide, $translateProvider) ->

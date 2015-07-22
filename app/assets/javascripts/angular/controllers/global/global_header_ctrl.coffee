@@ -1,4 +1,4 @@
-GlobalHeaderCtrl = ($scope, $state, $translate, $cookies, principal, sessionData) ->
+GlobalHeaderCtrl = ($scope, $state, $translate, $cookies, principal, sessionData, Rails) ->
 
   $scope.data = {}
 
@@ -6,7 +6,7 @@ GlobalHeaderCtrl = ($scope, $state, $translate, $cookies, principal, sessionData
   $scope.destroySession = ->
     sessionData.delete((response) ->
       $scope.data = {}
-      window.currentUser = {}
+      Rails.currentUser = {}
       principal.authenticate(null)
       $state.go('login')
     )
@@ -25,10 +25,10 @@ GlobalHeaderCtrl = ($scope, $state, $translate, $cookies, principal, sessionData
 
   # loading data
   $scope.loadData = ->
-    $scope.data.user =  window.currentUser
+    $scope.data.user =  Rails.currentUser
     $scope.setLanguage()
 
   $scope.loadData()
 
 angular.module('MealOrdering').controller 'GlobalHeaderCtrl', GlobalHeaderCtrl
-GlobalHeaderCtrl.$inject = ['$scope', '$state', '$translate', '$cookies', 'principal', 'sessionData']
+GlobalHeaderCtrl.$inject = ['$scope', '$state', '$translate', '$cookies', 'principal', 'sessionData', 'Rails']

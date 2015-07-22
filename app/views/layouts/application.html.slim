@@ -8,16 +8,6 @@ html ng-app="MealOrdering"
     = stylesheet_link_tag 'application', media: 'all'
     = csrf_meta_tags
 
-    javascript:
-      window.facebookId = #{ raw ENV['FACEBOOK_KEY'] }
-
-    - if logged_in?
-        javascript:
-          window.currentUser = #{ raw current_user.extend(HeaderUserRepresenter).to_json}
-    - else
-      javascript:
-        window.currentUser = {}
-
   body
     = yield
 
