@@ -48,7 +48,7 @@ describe Order do
 
   describe '#delivered' do
     context 'change state to delivered' do
-      before { order.delivered }
+      before { order.deliver! }
 
       it { expect(order.state).to eq('delivered') }
     end

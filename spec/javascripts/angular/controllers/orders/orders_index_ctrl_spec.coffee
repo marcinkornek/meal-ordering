@@ -13,7 +13,7 @@ describe 'OrdersIndexCtrl', ->
         consumers_count: 2
       }, {})
       $httpBackend.when('DELETE', '/api/orders/1').respond(200, Helper.orders[0])
-      $httpBackend.when('POST', '/api/order_delivered?id=1').respond(200, Helper.delivered)
+      $httpBackend.when('POST', '/api/order_deliver?id=1').respond(200, Helper.delivered)
     )
     inject((_$controller_, _$rootScope_, _$state_) ->
       # The injector unwraps the underscores (_) from around the parameter names when matching

@@ -35,8 +35,8 @@ class Api::OrdersController < ApplicationController
     render json: order.destroy
   end
 
-  def delivered
-    order.delivered
+  def deliver
+    order.deliver!
     render json: order.extend(OrderRepresenter)
   end
 

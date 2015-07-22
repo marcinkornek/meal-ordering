@@ -3,6 +3,6 @@ angular.module('MealOrdering').factory "ordersData", ($resource) ->
     {
       update: {method: "PUT"},
       query:  {method: "GET", isArray: false},
-      orderDelivered: {method: "POST", url: '/api/order_delivered'}
+      orderDelivered: {method: "POST", url: '/api/order_deliver'}
     }
   )

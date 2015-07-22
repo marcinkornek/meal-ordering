@@ -5,8 +5,7 @@ class Order < ActiveRecord::Base
   validates :product_name, presence: true
   validates :price,        numericality: {greater_than: 0}
 
-  def delivered
-    self.state = 'delivered'
-    self.save
+  def deliver!
+    self.update_attributes(state: 'delivered')
   end
 end
