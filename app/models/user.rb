@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :consumers, dependent: :destroy
+  has_many :orders, through: :consumers
 
   validates :email,      presence: true, uniqueness: {case_sensitive: false}
   validates :first_name, presence: true
@@ -10,10 +11,6 @@ class User < ActiveRecord::Base
   def self.find_for_oauth(params)
     user = User.find_by(provider: params[:provider], uid: params[:id])
     user || create_user_with_aouth(params)
-  end
-
-  def orders
-    Order.where('consumer_id IN (?)', consumers.pluck(:id))
   end
 
   private
