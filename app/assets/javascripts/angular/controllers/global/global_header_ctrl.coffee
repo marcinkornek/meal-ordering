@@ -6,7 +6,7 @@ GlobalHeaderCtrl = ($scope, $state, $translate, $cookies, principal, sessionData
   $scope.destroySession = ->
     sessionData.delete((response) ->
       $scope.data = {}
-      Rails.currentUser = {}
+      Rails.currentUser = null
       principal.authenticate(null)
       $state.go('login')
     )
