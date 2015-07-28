@@ -59,7 +59,7 @@ angular.module('MealOrdering').run([ "$rootScope", "$state", "$stateParams", "au
   $rootScope.$on "$stateChangeStart", (event, toState, toParams, fromState, fromParams) ->
     $rootScope.toState = toState
     $rootScope.toStateParams = toParams
-    if Rails.currentUser.id
+    unless Rails.currentUser == null
       principal.authenticate
         username: Rails.currentUser.username
         roles: [ Rails.currentUser.role ]

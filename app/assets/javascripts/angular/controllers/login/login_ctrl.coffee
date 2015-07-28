@@ -7,7 +7,7 @@ LoginCtrl = ($scope, $state, sessionData, Rails) ->
       $scope.statusChangeCallback(response)
 
     FB.init
-      appId: window.facebookId # App ID
+      appId: Rails.facebookId # App ID
       status: true # check login status
       cookie: true # enable cookies to allow the server to access the session
       xfbml: true  # parse XFBML
